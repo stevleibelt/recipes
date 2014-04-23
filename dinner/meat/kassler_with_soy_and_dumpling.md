@@ -12,7 +12,7 @@
 
 * prepare your dumplings in a separate pot
 * heat up a pan (maximum 50 percent the power of your hotplate)
-* put in the kassler, when the pan is heated up
+* when the pan is headted up, put in the kassler
 * use a potato peeler to peel your garden carrot
 * brown the kassler on both sides until it looks half finished
 * put the carrot strips into the pan
