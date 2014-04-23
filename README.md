@@ -17,3 +17,13 @@ Nun, ich liebe es zu kochen und im Regelfall nutze ich kein Rezept dafür. Eigen
 Immer, wenn eine Mahlzeit viel Applaus bekommt, werde ich es hier hinzufügen.
 
 Jedes Rezept wird auf Deutsch und auf Englisch sein.
+
+# Todo
+
+Add following to this repository:
+
+* https://abschnitt6.leibelt.de/archiv/133-Chipas-nach-Art-des-Hauses.html
+* https://abschnitt6.leibelt.de/archiv/123-Rezept-Kuerbis-mit-einem-Schuss-Orangensaft.html
+* https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
+* https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
+* https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
