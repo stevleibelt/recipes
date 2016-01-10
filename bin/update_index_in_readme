@@ -1,0 +1,134 @@
+#!/bin/env php
+<?php
+/**
+ * @author stev leibelt <artodeto@bazzline.net>
+ * @since 2016-01-10
+ */
+
+$baseUrl        = 'https://github.com/stevleibelt/recipes/blob/master';
+$paths          = require_once (__DIR__ . '/../.configuration/paths.php');
+$categories     = require_once ($paths['categories']);
+$pathToReadMe   = $paths['readme'];
+$pathToRecipes  = realpath($paths['recipes']);
+
+$contentOfReadMe        = file_get_contents($pathToReadMe);
+$contentOfReadMeAsArray = explode(PHP_EOL, $contentOfReadMe);
+$updatedContent         = array();
+
+$index              = createIndex($pathToRecipes);
+$filePathToTitle    = enrichIndex('## Title', $index);
+$filePathToTitel    = enrichIndex('## Titel', $index);
+$addTheNextLine    = true;
+
+foreach ($contentOfReadMeAsArray as $line) {
+    $newHeadlineDetected            = stringStartsWith($line, '#');
+    $isIndexHeadline                = stringStartsWith($line, '## Index');
+    $isInhaltsverzeihnisHeadline    = stringStartsWith($line, '## Inhaltsverzeichnis');
+
+    if ($addTheNextLine) {
+        $updatedContent[] = $line;
+    } else {
+        if ($newHeadlineDetected) {
+            $addTheNextLine = true;
+        }
+    }
+
+    if ($isIndexHeadline) {
+        $addTheNextLine = false;
+    } else if ($isInhaltsverzeihnisHeadline) {
+        $addTheNextLine = false;
+    }
+}
+
+var_dump($updatedContent);
+
+/**
+ * @param string $haystack
+ * @param string $needle
+ * @return bool
+ */
+function stringStartsWith($haystack, $needle)
+{
+    return (strncmp($haystack, $needle, strlen($needle)) === 0);
+}
+
+/**
+ * @param string $path
+ * @return RecursiveIteratorIterator
+ */
+function createGetAllMarkdownFilesIterator($path)
+{
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveCallbackFilterIterator(
+        new RecursiveDirectoryIterator($path, RecursiveDirectoryIterator::SKIP_DOTS),
+        function (SplFileInfo $current, $key, RecursiveDirectoryIterator $iterator) {
+            $isValid = (
+                (
+                    $iterator->isDir()
+                    && $iterator->hasChildren()
+                )
+                || (
+                    $current->isFile()
+                    && is_numeric($current->getBasename('.md'))
+                )
+            );
+
+            return $isValid;
+        }
+    ));
+
+    return $iterator;
+}
+
+/**
+ * @param string $path
+ * @return array
+ */
+function createIndex($path)
+{
+    $index      = array();
+    $iterator   = createGetAllMarkdownFilesIterator($path);
+    $length     = strlen($path);
+
+    foreach ($iterator as $file) {
+        /** @var DirectoryIterator $file */
+        $index[substr($file->getPathname(), $length)] = null;
+    }
+
+    return $index;
+}
+
+/**
+ * @param string $identifier
+ * @param array $index
+ * @return array
+ */
+function enrichIndex($identifier, $index)
+{
+    foreach ($index as $path => &$value) {
+        $countDownIterator  = false;
+        $filePath           = __DIR__ . '/..' . $path;
+        $contentAsArray     = explode(
+            PHP_EOL,
+            file_get_contents($filePath)
+        );
+        $iterator           = 3;
+
+        foreach ($contentAsArray as $line) {
+            if ($identifier === $line) {
+                $countDownIterator = true;
+            }
+
+            if ($countDownIterator) {
+                --$iterator;
+            }
+
+            if ($iterator === 0) {
+                $value = $line;
+                break;
+            }
+        }
+    }
+
+    return $index;
+}

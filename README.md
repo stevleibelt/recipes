@@ -8,6 +8,8 @@ Whenever a recipe is getting a lot of "tasty" points, i will add it in here.
 
 Each recipes will have a german and an english section.
 
+## Index
+
 # Rezepte
 
 Keine Rezepte zum Programmieren, aber Rezepte zum Kochen.
@@ -17,6 +19,8 @@ Nun, ich liebe es zu kochen und im Regelfall nutze ich kein Rezept dafür. Eigen
 Immer, wenn eine Mahlzeit viel Applaus bekommt, werde ich es hier hinzufügen.
 
 Jedes Rezept wird auf Deutsch und auf Englisch sein.
+
+## Inhaltsverzeichnis
 
 # Todo
 
