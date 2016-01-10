@@ -13,34 +13,19 @@ $pathToRecipes  = realpath($paths['recipes']);
 
 $contentOfReadMe        = file_get_contents($pathToReadMe);
 $contentOfReadMeAsArray = explode(PHP_EOL, $contentOfReadMe);
-$updatedContent         = array();
+$index                  = createIndex($pathToRecipes);
+$filePathToTitle        = enrichIndex('## Title', $index);
+$filePathToTitel        = enrichIndex('## Titel', $index);
 
-$index              = createIndex($pathToRecipes);
-$filePathToTitle    = enrichIndex('## Title', $index);
-$filePathToTitel    = enrichIndex('## Titel', $index);
-$addTheNextLine    = true;
+$updatedContent         = createUpdatedContent(
+    $baseUrl,
+    $contentOfReadMeAsArray,
+    $filePathToTitle,
+    $filePathToTitel
+);
 
-foreach ($contentOfReadMeAsArray as $line) {
-    $newHeadlineDetected            = stringStartsWith($line, '#');
-    $isIndexHeadline                = stringStartsWith($line, '## Index');
-    $isInhaltsverzeihnisHeadline    = stringStartsWith($line, '## Inhaltsverzeichnis');
-
-    if ($addTheNextLine) {
-        $updatedContent[] = $line;
-    } else {
-        if ($newHeadlineDetected) {
-            $addTheNextLine = true;
-        }
-    }
-
-    if ($isIndexHeadline) {
-        $addTheNextLine = false;
-    } else if ($isInhaltsverzeihnisHeadline) {
-        $addTheNextLine = false;
-    }
-}
-
-var_dump($updatedContent);
+foreach ($updatedContent as $line) {echo $line . PHP_EOL;}
+//file_put_contents($pathToReadMe, $updatedContent);
 
 /**
  * @param string $haystack
@@ -131,4 +116,63 @@ function enrichIndex($identifier, $index)
     }
 
     return $index;
+}
+
+/**
+ * @param string $baseUrl
+ * @param array $content
+ * @param array $filePathToTitle
+ * @param array $filePathToTitel
+ * @return array
+ */
+function createUpdatedContent($baseUrl, array $content, array $filePathToTitle, array $filePathToTitel)
+{
+    $addTheNextLines    = true;
+    $updatedContent     = array();
+
+    foreach ($content as $line) {
+        $newHeadlineDetected            = stringStartsWith($line, '#');
+        $isIndexHeadline                = stringStartsWith($line, '## Index');
+        $isInhaltsverzeihnisHeadline    = stringStartsWith($line, '## Inhaltsverzeichnis');
+
+        if ($addTheNextLines) {
+            $updatedContent[] = $line;
+        } else {
+            if ($newHeadlineDetected) {
+                $addTheNextLines = true;
+            }
+        }
+
+        if ($isIndexHeadline) {
+            $updatedContent[] = '';
+
+            foreach ($filePathToTitle as $path => $headLine) {
+                $isValidHeadLine = (
+                    $headLine !== ''
+                    && $headLine !== '\<title\>'
+                );
+
+                if ($isValidHeadLine) {
+                    $updatedContent[] = '* [' . $headLine . '](' . $baseUrl . $path . ')';
+                }
+            }
+            $addTheNextLines = false;
+        } else if ($isInhaltsverzeihnisHeadline) {
+            $updatedContent[] = '';
+
+            foreach ($filePathToTitel as $path => $headLine) {
+                $isValidHeadLine = (
+                    $headLine !== ''
+                    && $headLine !== '\<Titel\>'
+                );
+
+                if ($isValidHeadLine) {
+                    $updatedContent[] = '* [' . $headLine . '](' . $baseUrl . $path . ')';
+                }
+            }
+            $addTheNextLines = false;
+        }
+    }
+
+    return $updatedContent;
 }

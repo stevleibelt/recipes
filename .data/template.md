@@ -20,7 +20,7 @@
 
 ## Titel
 
-<Titel>
+\<Titel\>
 
 ## Zutaten für zwei Personen
 
