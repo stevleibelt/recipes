@@ -16,7 +16,6 @@ $contentOfReadMeAsArray = explode(PHP_EOL, $contentOfReadMe);
 $index                  = createIndex($pathToRecipes);
 $filePathToTitle        = enrichIndex('## Title', $index);
 $filePathToTitel        = enrichIndex('## Titel', $index);
-
 $updatedContent         = createUpdatedContent(
     $baseUrl,
     $contentOfReadMeAsArray,
@@ -24,8 +23,7 @@ $updatedContent         = createUpdatedContent(
     $filePathToTitel
 );
 
-foreach ($updatedContent as $line) {echo $line . PHP_EOL;}
-//file_put_contents($pathToReadMe, $updatedContent);
+file_put_contents($pathToReadMe, implode(PHP_EOL, $updatedContent));
 
 /**
  * @param string $haystack
@@ -131,14 +129,20 @@ function createUpdatedContent($baseUrl, array $content, array $filePathToTitle, 
     $updatedContent     = array();
 
     foreach ($content as $line) {
-        $newHeadlineDetected            = stringStartsWith($line, '#');
         $isIndexHeadline                = stringStartsWith($line, '## Index');
         $isInhaltsverzeihnisHeadline    = stringStartsWith($line, '## Inhaltsverzeichnis');
 
         if ($addTheNextLines) {
             $updatedContent[] = $line;
         } else {
+            $newHeadlineDetected = stringStartsWith($line, '#');
+
             if ($newHeadlineDetected) {
+                if (!$isIndexHeadline
+                    && !$isInhaltsverzeihnisHeadline) {
+                    $updatedContent[] = '';
+                    $updatedContent[] = $line;
+                }
                 $addTheNextLines = true;
             }
         }
