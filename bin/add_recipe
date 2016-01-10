@@ -1,0 +1,41 @@
+#!/bin/env php
+<?php
+/**
+ * @author stev leibelt <artodeto@bazzline.net>
+ * @since 2016-01-10
+ */
+
+$paths          = require_once (__DIR__ . '/../.configuration/paths.php');
+$categories     = require_once ($paths['categories']);
+$pathToRecipes  = realpath($paths['recipes']);
+$pathToTheIndex = realpath($paths['index']);
+$pathToTemplate = realpath($paths['template']);
+
+if ($argc < 2) {
+    echo 'invalid number of arguments provided' . PHP_EOL;
+    echo '    ' . basename(__FILE__) . ': <category>' . PHP_EOL;
+    exit (1);
+}
+
+$category                   = $argv[1];
+$invalidCategoryProvided    = (!in_array($category, $categories));
+
+if ($invalidCategoryProvided) {
+    echo 'invalid category provided' . PHP_EOL;
+    echo 'valid categories are: ' . PHP_EOL;
+    foreach ($categories as $category) {
+        echo '    ' . $category . PHP_EOL;
+    }
+    exit (1);
+}
+
+$prefix         = 'next: ';
+$lengthOfPrefix = strlen($prefix);
+$nextIndex      = trim(substr(file_get_contents($pathToTheIndex), $lengthOfPrefix));
+$filePath       = $pathToRecipes . '/' . $category . '/' . $nextIndex . '.md';
+
+copy($pathToTemplate, $filePath);
+echo 'file created: ' . $filePath . PHP_EOL;
+
+++$nextIndex;
+file_put_contents($pathToTheIndex, $prefix . $nextIndex);

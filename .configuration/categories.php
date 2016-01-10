@@ -5,10 +5,8 @@
  */
 
 return array(
-    'dinner' => array(
-        'meat'          => array(),
-        'vegetarian'    => array()
-    ),
-    'drink' => array(),
-    'snack' => array()
+    'dinner/meat',
+    'dinner/vegetarian',
+    'drink',
+    'snack'
 );

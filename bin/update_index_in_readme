@@ -7,7 +7,6 @@
 
 $baseUrl        = 'https://github.com/stevleibelt/recipes/blob/master';
 $paths          = require_once (__DIR__ . '/../.configuration/paths.php');
-$categories     = require_once ($paths['categories']);
 $pathToReadMe   = $paths['readme'];
 $pathToRecipes  = realpath($paths['recipes']);
 
