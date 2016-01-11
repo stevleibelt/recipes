@@ -42,22 +42,24 @@ function createGetAllMarkdownFilesIterator($path)
 {
     $iterator = new RecursiveIteratorIterator(
         new RecursiveCallbackFilterIterator(
-        new RecursiveDirectoryIterator($path, RecursiveDirectoryIterator::SKIP_DOTS),
-        function (SplFileInfo $current, $key, RecursiveDirectoryIterator $iterator) {
-            $isValid = (
-                (
-                    $iterator->isDir()
-                    && $iterator->hasChildren()
-                )
-                || (
-                    $current->isFile()
-                    && is_numeric($current->getBasename('.md'))
-                )
-            );
+            new RecursiveDirectoryIterator($path, RecursiveDirectoryIterator::SKIP_DOTS),
+            function (SplFileInfo $current, $key, RecursiveDirectoryIterator $iterator) {
+                //filter directories with content and files ending with .md
+                $isValid = (
+                    (
+                        $iterator->isDir()
+                        && $iterator->hasChildren()
+                    )
+                    || (
+                        $current->isFile()
+                        && is_numeric($current->getBasename('.md'))
+                    )
+                );
 
-            return $isValid;
-        }
-    ));
+                return $isValid;
+            }
+        )
+    );
 
     return $iterator;
 }
