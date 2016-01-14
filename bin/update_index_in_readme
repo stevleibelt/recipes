@@ -158,7 +158,7 @@ function createUpdatedContent($baseUrl, array $content, array $filePathToTitle, 
                 );
 
                 if ($isValidHeadLine) {
-                    $updatedContent[] = '* [' . $headLine . '](' . $baseUrl . $path . ')';
+                    $updatedContent[] = '* [' . $headLine . '](' . $baseUrl . $path . '#english)';
                 }
             }
             $addTheNextLines = false;
@@ -172,7 +172,7 @@ function createUpdatedContent($baseUrl, array $content, array $filePathToTitle, 
                 );
 
                 if ($isValidHeadLine) {
-                    $updatedContent[] = '* [' . $headLine . '](' . $baseUrl . $path . ')';
+                    $updatedContent[] = '* [' . $headLine . '](' . $baseUrl . $path . '#deutsch)';
                 }
             }
             $addTheNextLines = false;
