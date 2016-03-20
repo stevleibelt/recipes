@@ -33,6 +33,7 @@ Jedes Rezept wird auf Deutsch und auf Englisch sein.
 ## Inhaltsverzeichnis
 
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
+* [Möhren-Sellerie-Salat](https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Mokka mit dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/drink/10.md#deutsch)
 * [Nudelauflauf ala Stev](https://github.com/stevleibelt/recipes/blob/master/dinner/meat/09.md#deutsch)
