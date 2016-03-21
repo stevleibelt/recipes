@@ -22,10 +22,7 @@ $invalidCategoryProvided    = (!in_array($category, $categories));
 
 if ($invalidCategoryProvided) {
     echo 'invalid category provided' . PHP_EOL;
-    echo 'valid categories are: ' . PHP_EOL;
-    foreach ($categories as $category) {
-        echo '    ' . $category . PHP_EOL;
-    }
+    passthru(__DIR__ . '/list_categories');
     exit (1);
 }
 
