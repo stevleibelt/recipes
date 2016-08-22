@@ -37,7 +37,7 @@ echo 'file created: ' . $filePath . PHP_EOL;
 ++$nextIndex;
 file_put_contents($pathToTheIndex, $prefix . $nextIndex);
 
-$command = '/usr/bin/env vim ' . $pathToRecipes;
+$command = '/usr/bin/env vim ' . $filePath;
 passthru($command);
 
 echo 'execute update_index_in_readme' . PHP_EOL;
