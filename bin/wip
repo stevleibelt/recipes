@@ -1,0 +1,26 @@
+#!/bin/bash
+####
+#work in progress script
+####
+
+####
+#idea:
+#
+#replaces the create recipe script (or use them)
+####
+
+####
+#workflow:
+#
+#>will this recipe include an english translation?
+#   if yes -> include english template
+#will this recipe include a german translation?
+#   if yes -> include german template
+#<abort if neither german nor english is choosen>
+#<list available categories>
+#>please choose the fitting category
+#<create a file for the fitting category>
+#<open the file to edit and write>
+#<update readme>
+#<update tag list>
+####

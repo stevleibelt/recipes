@@ -59,6 +59,10 @@ Jedes Rezept wird auf Deutsch und auf Englisch sein.
     * https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
     * https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
     * https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
+* implement `bin/wip`
+* add tag list for each language section
+* add command to add english or german to a recipe that is currently only in german or english
+* order the items in the index per section and alphabetically
 
 # Links
 
