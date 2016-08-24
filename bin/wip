@@ -9,6 +9,55 @@
 #replaces the create recipe script (or use them)
 ####
 
+#begin of local variables
+LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=0
+LOCAL_PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+declare -a LOCAL_LIST_OF_CATEGORIES=("breakfast" "snack" "lunch" "dinner" "drink")
+#end of local variables
+
+#begin of user input
+read -p ":: Will this recipe include an english translation? [y/n] (no is default): " LOCAL_ENGLISH_TEMPLATE_SELECTED
+
+read -p ":: Will this recipe include a german translation? [y/n] (no is default): " LOCAL_GERMAN_TEMPLATE_SELECTED
+
+if [[ $LOCAL_ENGLISH_TEMPLATE_SELECTED == "y" ]];
+then
+    LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=1
+fi
+
+if [[ $LOCAL_GERMAN_TEMPLATE_SELECTED == "y" ]];
+then
+    LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=1
+fi
+
+if [[ $LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED -eq 0 ]];
+then
+    echo ":: Failed!"
+    echo ":: You have to include at least one translation"
+    exit 1
+fi
+
+echo ":: Available categories are"
+LOCAL_CATEGORY_LIST_AS_STRING=""
+
+for LOCAL_CATEGORY_KEY in ${!LOCAL_LIST_OF_CATEGORIES[@]}; do
+    LOCAL_CATEGORY_LIST_AS_STRING+="${LOCAL_CATEGORY_KEY}) ${LOCAL_LIST_OF_CATEGORIES[${LOCAL_CATEGORY_KEY}]}  "
+done
+
+while true; do
+    echo "   ${LOCAL_CATEGORY_LIST_AS_STRING}"
+    read -p ":: Please select the fitting category number. " LOCAL_CATEGORY_KEY_SELECTED
+    if [[ ! -z ${LOCAL_LIST_OF_CATEGORIES[$LOCAL_CATEGORY_KEY_SELECTED]} ]];
+    then
+        break;
+    else
+        echo ":: Failed!"
+        echo ":: Please input a valid category number."
+        echo ""
+    fi
+done
+#end of user input
+
 ####
 #workflow:
 #
@@ -19,6 +68,7 @@
 #<abort if neither german nor english is choosen>
 #<list available categories>
 #>please choose the fitting category
+#@todo
 #<create a file for the fitting category>
 #<open the file to edit and write>
 #<update readme>
