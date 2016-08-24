@@ -10,9 +10,14 @@
 ####
 
 #begin of local variables
-LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=0
-LOCAL_PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
-declare -a LOCAL_LIST_OF_CATEGORIES=("breakfast" "snack" "lunch" "dinner" "drink")
+declare -i LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=0
+declare -a LOCAL_LIST_OF_CATEGORIES=("breakfast" "snack" "lunch" "dinner" "drink")  #@todo move into .data/file
+declare -r LOCAL_PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+declare -r LOCAL_PATH_OF_THE_RECIPES=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/..
+declare -r LOCAL_PATH_OF_THE_ENGLISH_TEMPLATE=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/english_template.md
+declare -r LOCAL_PATH_OF_THE_GERMAN_TEMPLATE=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/german_template.md
+declare -r LOCAL_PATH_OF_THE_INDEX_FILE=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/index
+declare -i LOCAL_INDEX_OF_THE_NEXT_RECIPE=$(cat ${LOCAL_PATH_OF_THE_INDEX_FILE} | tr -cd [:digit:])
 #end of local variables
 
 #begin of user input
@@ -49,6 +54,7 @@ while true; do
     read -p ":: Please select the fitting category number. " LOCAL_CATEGORY_KEY_SELECTED
     if [[ ! -z ${LOCAL_LIST_OF_CATEGORIES[$LOCAL_CATEGORY_KEY_SELECTED]} ]];
     then
+        LOCAL_CATEGORY_NAME="${LOCAL_LIST_OF_CATEGORIES[$LOCAL_CATEGORY_KEY_SELECTED]}"
         break;
     else
         echo ":: Failed!"
@@ -57,6 +63,35 @@ while true; do
     fi
 done
 #end of user input
+
+#begin of creating the file
+LOCAL_PATH_OF_SELECTED_RECIPE_CATEGORY="${LOCAL_PATH_OF_THE_RECIPES}/${LOCAL_CATEGORY_NAME}"
+LOCAL_PATH_OF_NEXT_RECIPE="${LOCAL_PATH_OF_SELECTED_RECIPE_CATEGORY}/${LOCAL_INDEX_OF_THE_NEXT_RECIPE}.md"
+
+if [[ ! -d "${LOCAL_PATH_OF_SELECTED_RECIPE_CATEGORY}" ]];
+then
+    mkdir -p "${LOCAL_PATH_OF_SELECTED_RECIPE_CATEGORY}"
+fi
+
+/usr/bin/env touch "${LOCAL_PATH_OF_NEXT_RECIPE}"
+
+if [[ $LOCAL_ENGLISH_TEMPLATE_SELECTED == "y" ]];
+then
+    /usr/bin/env cat "${LOCAL_PATH_OF_THE_ENGLISH_TEMPLATE}" >> "${LOCAL_PATH_OF_NEXT_RECIPE}"
+    #@todo implement a smarter way
+    /usr/bin/env echo "" >> "${LOCAL_PATH_OF_NEXT_RECIPE}"
+fi
+
+if [[ $LOCAL_GERMAN_TEMPLATE_SELECTED == "y" ]];
+then
+    /usr/bin/env cat "${LOCAL_PATH_OF_THE_GERMAN_TEMPLATE}" >> "${LOCAL_PATH_OF_NEXT_RECIPE}"
+fi
+
+((LOCAL_INDEX_OF_THE_NEXT_RECIPE++))
+echo "next: ${LOCAL_INDEX_OF_THE_NEXT_RECIPE}" > "${LOCAL_PATH_OF_THE_INDEX_FILE}"
+
+/usr/bin/env vim "${LOCAL_PATH_OF_NEXT_RECIPE}"
+#begin of creating the file
 
 ####
 #workflow:
@@ -68,9 +103,10 @@ done
 #<abort if neither german nor english is choosen>
 #<list available categories>
 #>please choose the fitting category
-#@todo
 #<create a file for the fitting category>
 #<open the file to edit and write>
+#@todo
 #<update readme>
 #<update tag list>
+#put all in functions
 ####
