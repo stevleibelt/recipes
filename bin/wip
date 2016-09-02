@@ -25,17 +25,17 @@ read -p ":: Will this recipe include an english translation? [y/n] (no is defaul
 
 read -p ":: Will this recipe include a german translation? [y/n] (no is default): " LOCAL_GERMAN_TEMPLATE_SELECTED
 
-if [[ $LOCAL_ENGLISH_TEMPLATE_SELECTED == "y" ]];
+if [[ ${LOCAL_ENGLISH_TEMPLATE_SELECTED} == "y" ]];
 then
     LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=1
 fi
 
-if [[ $LOCAL_GERMAN_TEMPLATE_SELECTED == "y" ]];
+if [[ ${LOCAL_GERMAN_TEMPLATE_SELECTED} == "y" ]];
 then
     LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=1
 fi
 
-if [[ $LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED -eq 0 ]];
+if [[ ${LOCAL_AT_LEAST_ONE_TEMPLATE_WAS_SELECTED} -eq 0 ]];
 then
     echo ""
     echo ":: Failed!"
@@ -53,9 +53,9 @@ done
 while true; do
     echo "   ${LOCAL_CATEGORY_LIST_AS_STRING}"
     read -p ":: Please select the fitting category number. " LOCAL_CATEGORY_KEY_SELECTED
-    if [[ ! -z ${LOCAL_LIST_OF_CATEGORIES[$LOCAL_CATEGORY_KEY_SELECTED]} ]];
+    if [[ ! -z ${LOCAL_LIST_OF_CATEGORIES[${LOCAL_CATEGORY_KEY_SELECTED}]} ]];
     then
-        LOCAL_CATEGORY_NAME="${LOCAL_LIST_OF_CATEGORIES[$LOCAL_CATEGORY_KEY_SELECTED]}"
+        LOCAL_CATEGORY_NAME="${LOCAL_LIST_OF_CATEGORIES[${LOCAL_CATEGORY_KEY_SELECTED}]}"
         break;
     else
         echo ""
@@ -76,14 +76,14 @@ fi
 
 /usr/bin/env touch "${LOCAL_PATH_OF_NEXT_RECIPE}"
 
-if [[ $LOCAL_ENGLISH_TEMPLATE_SELECTED == "y" ]];
+if [[ ${LOCAL_ENGLISH_TEMPLATE_SELECTED} == "y" ]];
 then
     /usr/bin/env cat "${LOCAL_PATH_OF_THE_ENGLISH_TEMPLATE}" >> "${LOCAL_PATH_OF_NEXT_RECIPE}"
     #@todo implement a smarter way
     /usr/bin/env echo "" >> "${LOCAL_PATH_OF_NEXT_RECIPE}"
 fi
 
-if [[ $LOCAL_GERMAN_TEMPLATE_SELECTED == "y" ]];
+if [[ ${LOCAL_GERMAN_TEMPLATE_SELECTED} == "y" ]];
 then
     /usr/bin/env cat "${LOCAL_PATH_OF_THE_GERMAN_TEMPLATE}" >> "${LOCAL_PATH_OF_NEXT_RECIPE}"
 fi
