@@ -137,7 +137,7 @@ fi
 ((LOCAL_INDEX_OF_THE_NEXT_RECIPE++))
 execute_or_output "echo \"next: ${LOCAL_INDEX_OF_THE_NEXT_RECIPE}\" > \"${LOCAL_PATH_OF_THE_INDEX_FILE}\""
 
-/usr/bin/env vim "${LOCAL_PATH_OF_NEXT_RECIPE}"
+execute_or_output "/usr/bin/env vim \"${LOCAL_PATH_OF_NEXT_RECIPE}\""
 #begin of creating the file
 
 ####
