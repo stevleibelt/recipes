@@ -260,6 +260,8 @@ function update_readme ()
             fi
         fi
     done < "${PATH_OF_THE_README}"
+
+    execute_or_output "mv ${PATH_OF_THE_TEMPORARY_README} ${PATH_OF_THE_README}"
 }
 #end of updating the readme
 
