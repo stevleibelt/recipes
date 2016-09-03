@@ -10,19 +10,19 @@
 ####
 
 #begin of local variables
-declare -r LOCAL_CURRENT_WORKING_DIRECTORY=$(pwd)
-declare -i LOCAL_IS_DRY_RUN=0
-declare -a LOCAL_LIST_OF_CATEGORIES=("breakfast" "snack" "lunch" "dinner" "drink")  #@todo move into .data/file
-declare -a LOCAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
-declare -a LOCAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
-declare -r LOCAL_PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
-declare -r LOCAL_PATH_OF_THE_PROJECT_ROOT=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../
+declare -r GLOBAL_CURRENT_WORKING_DIRECTORY=$(pwd)
+declare -i GLOBAL_IS_DRY_RUN=0
+declare -a GLOBAL_LIST_OF_CATEGORIES=("breakfast" "snack" "lunch" "dinner" "drink")  #@todo move into .data/file
+declare -a GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
+declare -a GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
+declare -r GLOBAL_PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+declare -r GLOBAL_PATH_OF_THE_PROJECT_ROOT=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../
 #end of local variables
 
 #begin of functions
 function execute_or_output ()
 {
-    if [[ ${LOCAL_IS_DRY_RUN} -eq 1 ]];
+    if [[ ${GLOBAL_IS_DRY_RUN} -eq 1 ]];
     then
         echo ""
         echo "$1"
@@ -39,7 +39,7 @@ function update_local_variables_by_parsing_the_getopts ()
     do
         case ${CURRENT_OPTION} in
             d )
-                LOCAL_IS_DRY_RUN=1
+                GLOBAL_IS_DRY_RUN=1
                 ;;
             h )
                 echo "Usage: $(basename $0) [OPTION]"
@@ -84,7 +84,7 @@ function update_local_variables_by_user_input ()
         echo "::"
         echo ":: Failed!"
         echo ":: You have to include at least one translation"
-        cd ${LOCAL_CURRENT_WORKING_DIRECTORY}
+        cd ${GLOBAL_CURRENT_WORKING_DIRECTORY}
 
         exit 1
     fi
@@ -92,9 +92,9 @@ function update_local_variables_by_user_input ()
     echo ":: Available categories are"
     CATEGORY_LIST_AS_STRING=""
 
-    for CATEGORY_KEY in ${!LOCAL_LIST_OF_CATEGORIES[@]};
+    for CATEGORY_KEY in ${!GLOBAL_LIST_OF_CATEGORIES[@]};
     do
-        CATEGORY_LIST_AS_STRING+="${CATEGORY_KEY}) ${LOCAL_LIST_OF_CATEGORIES[${CATEGORY_KEY}]}  "
+        CATEGORY_LIST_AS_STRING+="${CATEGORY_KEY}) ${GLOBAL_LIST_OF_CATEGORIES[${CATEGORY_KEY}]}  "
     done
 
     while true; do
@@ -106,9 +106,9 @@ function update_local_variables_by_user_input ()
             echo "::"
             echo ":: Failed!"
             echo ":: Please input a valid category number."
-        elif [[ ! -z ${LOCAL_LIST_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]} ]];
+        elif [[ ! -z ${GLOBAL_LIST_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]} ]];
         then
-            LOCAL_CATEGORY_NAME="${LOCAL_LIST_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]}"
+            GLOBAL_CATEGORY_NAME="${GLOBAL_LIST_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]}"
             break;
         else
             echo "::"
@@ -122,13 +122,13 @@ function update_local_variables_by_user_input ()
 #begin of creating the file
 function create_and_edit_recipe_file ()
 {
-    local PATH_OF_THE_INDEX_FILE=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/index
+    local PATH_OF_THE_INDEX_FILE=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/index
     local INDEX_OF_THE_NEXT_RECIPE=$(cat ${PATH_OF_THE_INDEX_FILE} | tr -cd [:digit:])
-    local PATH_TO_THE_RECIPES=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/..
+    local PATH_TO_THE_RECIPES=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/..
 
-    local PATH_OF_THE_ENGLISH_TEMPLATE=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/english_template.md
-    local PATH_OF_THE_GERMAN_TEMPLATE=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/german_template.md
-    local PATH_OF_SELECTED_RECIPE_CATEGORY="${PATH_TO_THE_RECIPES}/${LOCAL_CATEGORY_NAME}"
+    local PATH_OF_THE_ENGLISH_TEMPLATE=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/english_template.md
+    local PATH_OF_THE_GERMAN_TEMPLATE=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/german_template.md
+    local PATH_OF_SELECTED_RECIPE_CATEGORY="${PATH_TO_THE_RECIPES}/${GLOBAL_CATEGORY_NAME}"
     local PATH_OF_NEXT_RECIPE="${PATH_OF_SELECTED_RECIPE_CATEGORY}/${INDEX_OF_THE_NEXT_RECIPE}.md"
 
     if [[ ! -d "${PATH_OF_SELECTED_RECIPE_CATEGORY}" ]];
@@ -138,14 +138,14 @@ function create_and_edit_recipe_file ()
 
     execute_or_output "/usr/bin/env touch \"${PATH_OF_NEXT_RECIPE}\""
 
-    if [[ ${LOCAL_ENGLISH_TEMPLATE_SELECTED} == "y" ]];
+    if [[ ${GLOBAL_ENGLISH_TEMPLATE_SELECTED} == "y" ]];
     then
         execute_or_output "/usr/bin/env cat \"${PATH_OF_THE_ENGLISH_TEMPLATE}\" >> \"${PATH_OF_NEXT_RECIPE}\""
         #@todo implement a smarter way
         execute_or_output "/usr/bin/env echo \"\" >> \"${PATH_OF_NEXT_RECIPE}\""
     fi
 
-    if [[ ${LOCAL_GERMAN_TEMPLATE_SELECTED} == "y" ]];
+    if [[ ${GLOBAL_GERMAN_TEMPLATE_SELECTED} == "y" ]];
     then
         execute_or_output "/usr/bin/env cat \"${PATH_OF_THE_GERMAN_TEMPLATE}\" >> \"${PATH_OF_NEXT_RECIPE}\""
     fi
@@ -160,7 +160,7 @@ function create_and_edit_recipe_file ()
 #begin of creating dynamic content for the readme
 function scan_recipe_files_and_create_language_based_index ()
 {
-    for RECIPE_CATEGORY in "${LOCAL_LIST_OF_CATEGORIES[@]}";
+    for RECIPE_CATEGORY in "${GLOBAL_LIST_OF_CATEGORIES[@]}";
     do
         if [[ -d ${RECIPE_CATEGORY}/ ]];
         then
@@ -200,12 +200,12 @@ function scan_recipe_files_and_create_language_based_index ()
 
                 if [[ "${RECIPE_ENGLISH_TITLE}" != "" ]];
                 then
-                    LOCAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES+=("[${RECIPE_ENGLISH_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#english")
+                    GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES+=("[${RECIPE_ENGLISH_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#english")
                 fi
 
                 if [[ "${RECIPE_GERMAN_TITLE}" != "" ]];
                 then
-                    LOCAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES+=("[${RECIPE_GERMAN_TITLE}]((https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#deutsch)")
+                    GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES+=("[${RECIPE_GERMAN_TITLE}]((https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#deutsch)")
                 fi
             done
         fi
@@ -216,7 +216,7 @@ function scan_recipe_files_and_create_language_based_index ()
 #begin of updating the readme
 function update_readme ()
 {
-    local PATH_OF_THE_README=${LOCAL_PATH_OF_THE_CURRENT_SCRIPT}/../README.md
+    local PATH_OF_THE_README=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../README.md
     local PATH_OF_THE_TEMPORARY_README=${PATH_OF_THE_README}.temporary
     local PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=1
 
@@ -243,7 +243,7 @@ function update_readme ()
             then
                 PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=0
                 echo "" >> "${PATH_OF_THE_TEMPORARY_README}"
-                for ENGLISH_INDEX_CONTENT_LINE in "${LOCAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[@]}";
+                for ENGLISH_INDEX_CONTENT_LINE in "${GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[@]}";
                 do
                     echo "* ${ENGLISH_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_README}"
                 done
@@ -252,7 +252,7 @@ function update_readme ()
             then
                 PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=0
                 echo "" >> "${PATH_OF_THE_TEMPORARY_README}"
-                for GERMAN_INDEX_CONTENT_LINE in "${LOCAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[@]}";
+                for GERMAN_INDEX_CONTENT_LINE in "${GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[@]}";
                 do
                     echo "* ${GERMAN_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_README}"
                 done
@@ -266,7 +266,7 @@ function update_readme ()
 #end of updating the readme
 
 #begin of main
-cd ${LOCAL_PATH_OF_THE_PROJECT_ROOT}
+cd ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}
 
 update_local_variables_by_parsing_the_getopts $@
 update_local_variables_by_user_input
@@ -274,7 +274,7 @@ create_and_edit_recipe_file
 scan_recipe_files_and_create_language_based_index
 update_readme
 
-cd ${LOCAL_CURRENT_WORKING_DIRECTORY}
+cd ${GLOBAL_CURRENT_WORKING_DIRECTORY}
 #end of main
 
 ####
