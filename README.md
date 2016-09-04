@@ -12,11 +12,10 @@ Each recipes will have a german and an english section.
 
 ## Index
 
-* 
-* [Chicken with asparagus, tomato and noodle.](https://github.com/stevleibelt/recipes/blob/master/dinner/01.md#english
-* [Noodle with sauce of carrot](https://github.com/stevleibelt/recipes/blob/master/dinner/03.md#english
-* [Ribbon noddle in tomato egg white sauce](https://github.com/stevleibelt/recipes/blob/master/dinner/04.md#english
-* [Dumpling by Leibelt](https://github.com/stevleibelt/recipes/blob/master/dinner/11.md#english
+* [Chicken with asparagus, tomato and noodle.](https://github.com/stevleibelt/recipes/blob/master/dinner/01.md#english)
+* [Noodle with sauce of carrot](https://github.com/stevleibelt/recipes/blob/master/dinner/03.md#english)
+* [Ribbon noddle in tomato egg white sauce](https://github.com/stevleibelt/recipes/blob/master/dinner/04.md#english)
+* [Dumpling by Leibelt](https://github.com/stevleibelt/recipes/blob/master/dinner/11.md#english)
 
 # Rezepte
 
@@ -32,7 +31,6 @@ Jedes Rezept wird auf Deutsch und auf Englisch sein.
 
 ## Inhaltsverzeichnis
 
-* 
 * [Tollkühner winkhausscher Wunderteig]((https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
 * [Möhren-Sellerie-Salat]((https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
 * [Baiser]((https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)

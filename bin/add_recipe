@@ -211,7 +211,7 @@ function scan_recipe_files_and_create_language_based_index ()
 
                 if [[ "${RECIPE_ENGLISH_TITLE}" != "" ]];
                 then
-                    GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES+=("[${RECIPE_ENGLISH_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#english")
+                    GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES+=("[${RECIPE_ENGLISH_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#english)")
                 fi
 
                 if [[ "${RECIPE_GERMAN_TITLE}" != "" ]];
@@ -223,15 +223,16 @@ function scan_recipe_files_and_create_language_based_index ()
     done
 
     #begin of sorting
-    declare -a local SORTED_ARRAY=()
-    IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[*]}"))
-    unset IFS 
-    GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=${SORTED}
+    #@todo
+    #declare -a local SORTED_ARRAY=()
+    #IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[*]}"))
+    #unset IFS 
+    #GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=${SORTED}
 
-    declare -a local SORTED_ARRAY=()
-    IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[*]}"))
-    unset IFS 
-    GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=${SORTED}
+    #declare -a local SORTED_ARRAY=()
+    #IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[*]}"))
+    #unset IFS 
+    #GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=${SORTED}
     #end of sorting
 }
 #end of creating dynamic content for the readme
