@@ -210,6 +210,18 @@ function scan_recipe_files_and_create_language_based_index ()
             done
         fi
     done
+
+    #begin of sorting
+    declare -a local SORTED_ARRAY=()
+    IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[*]}"))
+    unset IFS 
+    GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=${SORTED}
+
+    declare -a local SORTED_ARRAY=()
+    IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[*]}"))
+    unset IFS 
+    GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=${SORTED}
+    #end of sorting
 }
 #end of creating dynamic content for the readme
 
@@ -279,10 +291,15 @@ cd ${GLOBAL_CURRENT_WORKING_DIRECTORY}
 
 ####
 #@todo
+#<update readme>
+#   sort recipies
+#       by category
+#       by name
 #<update tag list>
 #   read files per category
 #   add each tag into a language based tag array (if tag is not already in)
 #   create a file per tag
 #   add a link to the tag file into the language based readme section
 #   search in each file (per category) if this tag exist and add the title as well as the link to the file into this tag file
+#<ask if you want to edit an existing recipe or create a new recipe>
 ####
