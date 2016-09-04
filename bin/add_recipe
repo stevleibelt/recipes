@@ -216,7 +216,7 @@ function scan_recipe_files_and_create_language_based_index ()
 
                 if [[ "${RECIPE_GERMAN_TITLE}" != "" ]];
                 then
-                    GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES+=("[${RECIPE_GERMAN_TITLE}]((https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#deutsch)")
+                    GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES+=("[${RECIPE_GERMAN_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#deutsch)")
                 fi
             done
         fi
