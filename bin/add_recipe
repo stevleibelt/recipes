@@ -10,16 +10,29 @@
 ####
 
 #begin of local variables
-declare -r GLOBAL_CURRENT_WORKING_DIRECTORY=$(pwd)
 declare -i GLOBAL_IS_DRY_RUN=0
 declare -a GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
 declare -a GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
-declare -r GLOBAL_PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
-declare -r GLOBAL_PATH_OF_THE_PROJECT_ROOT=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../
-declare -a GLOBAL_LIST_OF_CATEGORIES=($(cat ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}/.data/categories))
 #end of local variables
 
 #begin of functions
+function setup ()
+{
+    local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+
+    source ${PATH_OF_THE_CURRENT_SCRIPT}/core
+
+    core_main
+
+    cd ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}
+}
+
+function tear_down ()
+{
+    cd ${GLOBAL_PATH_OF_THE_CURRENT_WORKING_DIRECTORY}
+}
+
+
 function execute_or_output ()
 {
     if [[ ${GLOBAL_IS_DRY_RUN} -eq 1 ]];
@@ -84,7 +97,7 @@ function update_local_variables_by_user_input ()
         echo "::"
         echo ":: Failed!"
         echo ":: You have to include at least one translation"
-        cd ${GLOBAL_CURRENT_WORKING_DIRECTORY}
+        tear_down
 
         exit 1
     fi
@@ -122,14 +135,10 @@ function update_local_variables_by_user_input ()
 #begin of creating the file
 function create_and_edit_recipe_file ()
 {
-    #local PATH_TO_THE_RECIPES="${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/.."
-    #local PATH_OF_THE_INDEX_FILE="${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/index"
     local PATH_OF_THE_INDEX_FILE=.data/index
     local INDEX_OF_THE_NEXT_RECIPE=$(cat ${PATH_OF_THE_INDEX_FILE} | tr -cd [:digit:])
 
-    #local PATH_OF_THE_ENGLISH_TEMPLATE=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/english_template.md
     local PATH_OF_THE_ENGLISH_TEMPLATE=.data/english_template.md
-    #local PATH_OF_THE_GERMAN_TEMPLATE=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../.data/german_template.md
     local PATH_OF_THE_GERMAN_TEMPLATE=.data/german_template.md
     #local PATH_OF_SELECTED_RECIPE_CATEGORY="${PATH_TO_THE_RECIPES}/${GLOBAL_CATEGORY_NAME}"
     local PATH_OF_SELECTED_RECIPE_CATEGORY=${GLOBAL_CATEGORY_NAME}
@@ -240,7 +249,6 @@ function scan_recipe_files_and_create_language_based_index ()
 #begin of updating the readme
 function update_readme ()
 {
-    #local PATH_OF_THE_README="${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../README.md"
     local PATH_OF_THE_README=README.md
     local PATH_OF_THE_TEMPORARY_README=${PATH_OF_THE_README}.temporary
     local PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=1
@@ -291,7 +299,7 @@ function update_readme ()
 #end of updating the readme
 
 #begin of main
-cd ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}
+setup
 
 update_local_variables_by_parsing_the_getopts $@
 update_local_variables_by_user_input
@@ -299,7 +307,7 @@ create_and_edit_recipe_file
 scan_recipe_files_and_create_language_based_index
 update_readme
 
-cd ${GLOBAL_CURRENT_WORKING_DIRECTORY}
+tear_down
 #end of main
 
 ####

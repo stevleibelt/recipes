@@ -1,0 +1,49 @@
+#!/bin/bash
+####
+# @author stev leibelt <artodeto@bazzline.net>
+# @since 2016-09-07
+####
+
+####
+# declares constant core_setup_global_list_of_categories
+####
+function core_setup_global_list_of_categories ()
+{
+    echo $(pwd)
+    echo "path to project root: ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}"
+    echo "path to the categories: ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/categories"
+    export GLOBAL_LIST_OF_CATEGORIES=($(cat ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/categories))
+    echo "categories: ${GLOBAL_LIST_OF_CATEGORIES[@]}"
+}
+
+####
+# declares constant GLOBAL_PATH_OF_THE_CURRENT_WORKING_DIRECTORY
+####
+function core_setup_global_path_of_current_working_directory ()
+{
+    export GLOBAL_PATH_OF_THE_CURRENT_WORKING_DIRECTORY=$(pwd)
+}
+
+####
+# declares constant PATH_OF_THE_CURRENT_SCRIPT
+####
+function core_setup_global_path_of_the_project_root ()
+{
+    local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+
+    export GLOBAL_PATH_OF_THE_PROJECT_ROOT=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../
+    echo "path to project root: ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}"
+}
+
+####
+# calling functions
+#   core_setup_global_path_of_the_project_root
+#   core_setup_global_path_of_the_current_working_directory
+#   core_setup_global_list_of_categories
+####
+function core_main ()
+{
+    core_setup_global_path_of_the_project_root
+    core_setup_global_path_of_current_working_directory
+    core_setup_global_list_of_categories
+}
