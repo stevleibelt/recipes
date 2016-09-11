@@ -9,11 +9,7 @@
 ####
 function core_setup_global_list_of_categories ()
 {
-    echo $(pwd)
-    echo "path to project root: ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}"
-    echo "path to the categories: ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/categories"
     export GLOBAL_LIST_OF_CATEGORIES=($(cat ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/categories))
-    echo "categories: ${GLOBAL_LIST_OF_CATEGORIES[@]}"
 }
 
 ####
@@ -31,8 +27,7 @@ function core_setup_global_path_of_the_project_root ()
 {
     local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
 
-    export GLOBAL_PATH_OF_THE_PROJECT_ROOT=${GLOBAL_PATH_OF_THE_CURRENT_SCRIPT}/../
-    echo "path to project root: ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}"
+    export GLOBAL_PATH_OF_THE_PROJECT_ROOT=${PATH_OF_THE_CURRENT_SCRIPT}/../
 }
 
 ####
@@ -43,7 +38,7 @@ function core_setup_global_path_of_the_project_root ()
 ####
 function core_main ()
 {
-    core_setup_global_path_of_the_project_root
     core_setup_global_path_of_current_working_directory
+    core_setup_global_path_of_the_project_root
     core_setup_global_list_of_categories
 }
