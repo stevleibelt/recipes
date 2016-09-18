@@ -112,7 +112,8 @@ function update_local_variables_by_user_input ()
 
     while true; do
         echo "   ${CATEGORY_LIST_AS_STRING}"
-        read -p ":: Please select the fitting category number. " CATEGORY_KEY_SELECTED
+        echo ":: Please select the fitting category number. "
+        read -p "   " CATEGORY_KEY_SELECTED
 
         if [[ -z ${CATEGORY_KEY_SELECTED} ]];
         then
@@ -135,45 +136,45 @@ function update_local_variables_by_user_input ()
 #begin of creating the file
 function create_and_edit_recipe_file ()
 {
-    local PATH_OF_THE_INDEX_FILE=.data/index
+    local PATH_OF_THE_INDEX_FILE="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/index"
     local INDEX_OF_THE_NEXT_RECIPE=$(cat ${PATH_OF_THE_INDEX_FILE} | tr -cd [:digit:])
 
-    local PATH_OF_THE_ENGLISH_TEMPLATE=.data/english_template.md
-    local PATH_OF_THE_GERMAN_TEMPLATE=.data/german_template.md
+    local PATH_OF_THE_ENGLISH_TEMPLATE="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/english_template.md"
+    local PATH_OF_THE_GERMAN_TEMPLATE="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/german_template.md"
     #local PATH_OF_SELECTED_RECIPE_CATEGORY="${PATH_TO_THE_RECIPES}/${GLOBAL_CATEGORY_NAME}"
-    local PATH_OF_SELECTED_RECIPE_CATEGORY=${GLOBAL_CATEGORY_NAME}
-    local PATH_OF_NEXT_RECIPE=${PATH_OF_SELECTED_RECIPE_CATEGORY}/${INDEX_OF_THE_NEXT_RECIPE}.md
+    local PATH_OF_SELECTED_RECIPE_CATEGORY="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}${GLOBAL_CATEGORY_NAME}"
+    local PATH_OF_NEXT_RECIPE="${PATH_OF_SELECTED_RECIPE_CATEGORY}/${INDEX_OF_THE_NEXT_RECIPE}.md"
 
     if [[ ! -d "${PATH_OF_SELECTED_RECIPE_CATEGORY}" ]];
     then
-        execute_or_output "/usr/bin/env mkdir -p ${PATH_OF_SELECTED_RECIPE_CATEGORY}"
-        #/usr/bin/env mkdir -p ${PATH_OF_SELECTED_RECIPE_CATEGORY}
+        #execute_or_output "/usr/bin/env mkdir -p ${PATH_OF_SELECTED_RECIPE_CATEGORY}"
+        /usr/bin/env mkdir -p ${PATH_OF_SELECTED_RECIPE_CATEGORY}
     fi
 
-    execute_or_output "/usr/bin/env touch \"${PATH_OF_NEXT_RECIPE}\""
-    #/usr/bin/env touch "${PATH_OF_NEXT_RECIPE}"
+    #execute_or_output "/usr/bin/env touch ${PATH_OF_NEXT_RECIPE}"
+    /usr/bin/env touch ${PATH_OF_NEXT_RECIPE}
 
     if [[ ${GLOBAL_ENGLISH_TEMPLATE_SELECTED} == "y" ]];
     then
-        execute_or_output "/usr/bin/env cat \"${PATH_OF_THE_ENGLISH_TEMPLATE}\" >> \"${PATH_OF_NEXT_RECIPE}\""
-        #/usr/bin/env cat "${PATH_OF_THE_ENGLISH_TEMPLATE}" >> "${PATH_OF_NEXT_RECIPE}"
+        #execute_or_output "/usr/bin/env cat ${PATH_OF_THE_ENGLISH_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}"
+        /usr/bin/env cat ${PATH_OF_THE_ENGLISH_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}
         #@todo implement a smarter way
-        execute_or_output "/usr/bin/env echo \"\" >> \"${PATH_OF_NEXT_RECIPE}\""
-        #/usr/bin/env echo "" >> "${PATH_OF_NEXT_RECIPE}"
+        #execute_or_output "/usr/bin/env echo \"\" >> ${PATH_OF_NEXT_RECIPE}"
+        /usr/bin/env echo "" >> ${PATH_OF_NEXT_RECIPE}
     fi
 
     if [[ ${GLOBAL_GERMAN_TEMPLATE_SELECTED} == "y" ]];
     then
-        execute_or_output "/usr/bin/env cat \"${PATH_OF_THE_GERMAN_TEMPLATE}\" >> \"${PATH_OF_NEXT_RECIPE}\""
-        #/usr/bin/env cat "${PATH_OF_THE_GERMAN_TEMPLATE}" >> "${PATH_OF_NEXT_RECIPE}"
+        #execute_or_output "/usr/bin/env cat ${PATH_OF_THE_GERMAN_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}"
+        /usr/bin/env cat ${PATH_OF_THE_GERMAN_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}
     fi
 
-    ((INDEX_OF_THE_NEXT_RECIPE++))
-    execute_or_output "echo \"next: ${INDEX_OF_THE_NEXT_RECIPE}\" > \"${PATH_OF_THE_INDEX_FILE}\""
-    #echo "next: ${INDEX_OF_THE_NEXT_RECIPE}" > "${PATH_OF_THE_INDEX_FILE}"
+    ((++INDEX_OF_THE_NEXT_RECIPE))
+    #execute_or_output "echo \"next: ${INDEX_OF_THE_NEXT_RECIPE}\" > ${PATH_OF_THE_INDEX_FILE}"
+    echo "next: ${INDEX_OF_THE_NEXT_RECIPE}" > ${PATH_OF_THE_INDEX_FILE}
 
-    execute_or_output "/usr/bin/env vim \"${PATH_OF_NEXT_RECIPE}\""
-    #/usr/bin/env vim "${PATH_OF_NEXT_RECIPE}"
+    #execute_or_output "/usr/bin/env vim ${PATH_OF_NEXT_RECIPE}"
+    /usr/bin/env vim ${PATH_OF_NEXT_RECIPE}
 }
 #begin of creating the file
 
@@ -293,8 +294,8 @@ function update_readme ()
         fi
     done < "${PATH_OF_THE_README}"
 
-    execute_or_output "mv \"${PATH_OF_THE_TEMPORARY_README}\" \"${PATH_OF_THE_README}\""
-    #mv "${PATH_OF_THE_TEMPORARY_README}" "${PATH_OF_THE_README}"
+    #execute_or_output "mv \"${PATH_OF_THE_TEMPORARY_README}\" \"${PATH_OF_THE_README}\""
+    mv ${PATH_OF_THE_TEMPORARY_README} ${PATH_OF_THE_README}
 }
 #end of updating the readme
 
