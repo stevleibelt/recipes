@@ -9,7 +9,7 @@
 ####
 function core_setup_global_list_of_categories ()
 {
-    export GLOBAL_LIST_OF_CATEGORIES=($(cat ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/categories))
+    export GLOBAL_LIST_OF_CATEGORIES=$(cat ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/categories)
 }
 
 ####
