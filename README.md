@@ -1,6 +1,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -56,6 +57,7 @@ Jedes Rezept wird auf Deutsch und auf Englisch sein.
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
 * [Süßes Dinkelbrot nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/snack/15.md#deutsch)
 * [Einfacher Frischkornbrei im Thermomix](https://github.com/stevleibelt/recipes/blob/master/snack/16.md#deutsch)
+* [Marzipan Kuchen von Omas [Oma](https://de.wikipedia.org/wiki/Schottland) von vor dem Krieg](https://github.com/stevleibelt/recipes/blob/master/snack/21.md#deutsch)
 
 # To Do
 
