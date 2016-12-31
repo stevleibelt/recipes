@@ -4,6 +4,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -54,6 +55,7 @@ Jedes Rezept wird auf Deutsch und auf Englisch sein.
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
 * [Toastbrot / Röstbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/20.md#deutsch)
 * [Mandelmus selber machen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/22.md#deutsch)
+* [Curryreis](https://github.com/stevleibelt/recipes/blob/master/fundamentals/24.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
@@ -67,11 +69,11 @@ Jedes Rezept wird auf Deutsch und auf Englisch sein.
 
 * sort index
 * add following recipes to this repository
-    * https://abschnitt6.leibelt.de/archiv/133-Chipas-nach-Art-des-Hauses.html
-    * https://abschnitt6.leibelt.de/archiv/123-Rezept-Kuerbis-mit-einem-Schuss-Orangensaft.html
-    * https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
-    * https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
-    * https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
+* https://abschnitt6.leibelt.de/archiv/133-Chipas-nach-Art-des-Hauses.html
+* https://abschnitt6.leibelt.de/archiv/123-Rezept-Kuerbis-mit-einem-Schuss-Orangensaft.html
+* https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
+* https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
+* https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
 * fundamental -> butter, mehl -> mehlschwitze (1 Minute, 80 Grad), zwiebeln (10 Sekunden, Stufen 6)
 * implement `bin/wip`
 * add tag list for each language section
