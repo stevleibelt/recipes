@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 # Recipes
 
 ## Description
@@ -15,7 +8,7 @@ Well, i love to cook and on a regular base, I don't use a recipe book. Usually, 
 
 Whenever a recipe is getting a lot of "tasty" points, i will add it in here.
 
-Each recipes will have a german and an english section.
+Each recipes can have a german and an english section.
 
 ## Index
 
@@ -35,7 +28,7 @@ Nun, ich liebe es zu kochen und im Regelfall nutze ich kein Rezept dafür. Eigen
 
 Immer, wenn eine Mahlzeit viel Applaus bekommt, werde ich es hier hinzufügen.
 
-Jedes Rezept wird auf Deutsch und auf Englisch sein.
+Jedes Rezept kann auf Deutsch und auf Englisch sein.
 
 ## Inhaltsverzeichnis
 
@@ -69,11 +62,11 @@ Jedes Rezept wird auf Deutsch und auf Englisch sein.
 
 * sort index
 * add following recipes to this repository
-* https://abschnitt6.leibelt.de/archiv/133-Chipas-nach-Art-des-Hauses.html
-* https://abschnitt6.leibelt.de/archiv/123-Rezept-Kuerbis-mit-einem-Schuss-Orangensaft.html
-* https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
-* https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
-* https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
+    * https://abschnitt6.leibelt.de/archiv/133-Chipas-nach-Art-des-Hauses.html
+    * https://abschnitt6.leibelt.de/archiv/123-Rezept-Kuerbis-mit-einem-Schuss-Orangensaft.html
+    * https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
+    * https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
+    * https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
 * fundamental -> butter, mehl -> mehlschwitze (1 Minute, 80 Grad), zwiebeln (10 Sekunden, Stufen 6)
 * implement `bin/wip`
 * add tag list for each language section
