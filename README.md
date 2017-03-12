@@ -1,3 +1,4 @@
+
 # Recipes
 
 ## Description
@@ -44,6 +45,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Nudelauflauf ala Stev](https://github.com/stevleibelt/recipes/blob/master/dinner/09.md#deutsch)
 * [Klöße nach Art des Hauses Leibelt](https://github.com/stevleibelt/recipes/blob/master/dinner/11.md#deutsch)
 * [Vollkornpizza (Brotgebäck) mit Champignon und Putenstreifen](https://github.com/stevleibelt/recipes/blob/master/dinner/18.md#deutsch)
+* [Mozzarella-Dinkel-Pizza](https://github.com/stevleibelt/recipes/blob/master/dinner/25.md#deutsch)
 * [Mokka mit dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/drink/10.md#deutsch)
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
 * [Toastbrot / Röstbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/20.md#deutsch)
@@ -62,11 +64,11 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 
 * sort index
 * add following recipes to this repository
-    * https://abschnitt6.leibelt.de/archiv/133-Chipas-nach-Art-des-Hauses.html
-    * https://abschnitt6.leibelt.de/archiv/123-Rezept-Kuerbis-mit-einem-Schuss-Orangensaft.html
-    * https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
-    * https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
-    * https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
+* https://abschnitt6.leibelt.de/archiv/133-Chipas-nach-Art-des-Hauses.html
+* https://abschnitt6.leibelt.de/archiv/123-Rezept-Kuerbis-mit-einem-Schuss-Orangensaft.html
+* https://abschnitt6.leibelt.de/archiv/96-Freiberger-Eierschecke-nach-Art-des-Hauses.html
+* https://abschnitt6.leibelt.de/archiv/92-Rezept-Salat-mit-Hokkaido-Kuerbis.html
+* https://abschnitt6.leibelt.de/archiv/72-Rezept-Kuerbiscremesuppe.html
 * fundamental -> butter, mehl -> mehlschwitze (1 Minute, 80 Grad), zwiebeln (10 Sekunden, Stufen 6)
 * implement `bin/wip`
 * add tag list for each language section
