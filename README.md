@@ -74,6 +74,11 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * add tag list for each language section
 * add command to add english or german to a recipe that is currently only in german or english
 * order the items in the index per section and alphabetically
+* add [Antipasti](http://www.selber-machen.de/weltrezepte/antipasti-selber-machen/)
+* add [Gnocchi](http://www.selber-machen.de/weltrezepte/gnocchi-selber-machen/)
+* add [Noodle](http://www.selber-machen.de/weltrezepte/nudeln-selber-machen/)
+* add [Pasta](http://www.selber-machen.de/weltrezepte/pasta-selber-machen/)
+* add [Butter](http://www.selber-machen.de/weltrezepte/butter-selber-machen/)
 
 # Links
 
