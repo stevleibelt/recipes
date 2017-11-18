@@ -1,4 +1,5 @@
 
+
 # Recipes
 
 ## Description
@@ -45,7 +46,8 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Nudelauflauf ala Stev](https://github.com/stevleibelt/recipes/blob/master/dinner/09.md#deutsch)
 * [Klöße nach Art des Hauses Leibelt](https://github.com/stevleibelt/recipes/blob/master/dinner/11.md#deutsch)
 * [Vollkornpizza (Brotgebäck) mit Champignon und Putenstreifen](https://github.com/stevleibelt/recipes/blob/master/dinner/18.md#deutsch)
-* [Mozzarella-Dinkel-Pizza](https://github.com/stevleibelt/recipes/blob/master/dinner/25.md#deutsch)
+* [Knoblauch-Mozzarella-Dinkel-Pizza](https://github.com/stevleibelt/recipes/blob/master/dinner/25.md#deutsch)
+* [Bratkartoffeln mit Bohnen und Weihnachtskürbis](https://github.com/stevleibelt/recipes/blob/master/dinner/26.md#deutsch)
 * [Mokka mit dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/drink/10.md#deutsch)
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
 * [Toastbrot / Röstbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/20.md#deutsch)
