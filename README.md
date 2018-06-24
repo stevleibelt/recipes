@@ -2,6 +2,8 @@
 
 
 
+
+
 # Recipes
 
 ## Description
@@ -50,11 +52,13 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Vollkornpizza (Brotgebäck) mit Champignon und Putenstreifen](https://github.com/stevleibelt/recipes/blob/master/dinner/18.md#deutsch)
 * [Knoblauch-Mozzarella-Dinkel-Pizza](https://github.com/stevleibelt/recipes/blob/master/dinner/25.md#deutsch)
 * [Bratkartoffeln mit Bohnen und Weihnachtskürbis](https://github.com/stevleibelt/recipes/blob/master/dinner/26.md#deutsch)
+* [Möhren-Leinsam-Sosse mit Kartoffelecken](https://github.com/stevleibelt/recipes/blob/master/dinner/30.md#deutsch)
 * [Mokka mit dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/drink/10.md#deutsch)
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
 * [Toastbrot / Röstbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/20.md#deutsch)
 * [Mandelmus selber machen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/22.md#deutsch)
 * [Curryreis](https://github.com/stevleibelt/recipes/blob/master/fundamentals/24.md#deutsch)
+* [Pizzateige](https://github.com/stevleibelt/recipes/blob/master/fundamentals/29.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Vegetarische Möhrenbolognese](https://github.com/stevleibelt/recipes/blob/master/lunch/28.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
