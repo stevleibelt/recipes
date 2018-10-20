@@ -5,6 +5,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -61,6 +62,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Mandelmus selber machen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/22.md#deutsch)
 * [Curryreis](https://github.com/stevleibelt/recipes/blob/master/fundamentals/24.md#deutsch)
 * [Pizzateige](https://github.com/stevleibelt/recipes/blob/master/fundamentals/29.md#deutsch)
+* [Erdnussbutter](https://github.com/stevleibelt/recipes/blob/master/fundamentals/32.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Vegetarische Möhrenbolognese](https://github.com/stevleibelt/recipes/blob/master/lunch/28.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
