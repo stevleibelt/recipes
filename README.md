@@ -6,6 +6,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -55,6 +56,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Knoblauch-Mozzarella-Dinkel-Pizza](https://github.com/stevleibelt/recipes/blob/master/dinner/25.md#deutsch)
 * [Bratkartoffeln mit Bohnen und Weihnachtskürbis](https://github.com/stevleibelt/recipes/blob/master/dinner/26.md#deutsch)
 * [Möhren-Leinsam-Sosse mit Kartoffelecken](https://github.com/stevleibelt/recipes/blob/master/dinner/30.md#deutsch)
+* [Lamm im Römertopf](https://github.com/stevleibelt/recipes/blob/master/dinner/33.md#deutsch)
 * [Mokka mit dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/drink/10.md#deutsch)
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
 * [Vitamin-Shot für den Start in den Morgen](https://github.com/stevleibelt/recipes/blob/master/drink/31.md#deutsch)
