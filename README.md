@@ -12,6 +12,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -74,8 +75,11 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Honig-Senf-Sosse](https://github.com/stevleibelt/recipes/blob/master/fundamentals/34.md#deutsch)
 * [Hummus (vegetarische Pesto)](https://github.com/stevleibelt/recipes/blob/master/fundamentals/37.md#deutsch)
 * [Buchweizen-Vollkornbrot im Römertopf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/38.md#deutsch)
+* [Chipas](https://github.com/stevleibelt/recipes/blob/master/fundamentals/39.md#deutsch)
+* [Chinesischer Nudelsalat](https://github.com/stevleibelt/recipes/blob/master/fundamentals/41.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Vegetarische Möhrenbolognese](https://github.com/stevleibelt/recipes/blob/master/lunch/28.md#deutsch)
+* [Chilli Sin Carne im Thermomix](https://github.com/stevleibelt/recipes/blob/master/lunch/40.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
 * [Möhren-Sellerie-Salat](https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
