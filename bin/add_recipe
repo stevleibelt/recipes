@@ -25,6 +25,8 @@ function setup ()
     core_main
 
     cd ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}
+
+    git pull
 }
 
 function tear_down ()
