@@ -24,6 +24,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -95,6 +96,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Zacusca für den Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/47.md#deutsch)
 * [Sächsischer Kartoffelsalat nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/fundamentals/49.md#deutsch)
 * [Frikadellen ohne Ei](https://github.com/stevleibelt/recipes/blob/master/fundamentals/52.md#deutsch)
+* [Tzaziki](https://github.com/stevleibelt/recipes/blob/master/fundamentals/53.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Vegetarische Möhrenbolognese](https://github.com/stevleibelt/recipes/blob/master/lunch/28.md#deutsch)
 * [Chilli Sin Carne im Thermomix](https://github.com/stevleibelt/recipes/blob/master/lunch/40.md#deutsch)
