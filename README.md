@@ -26,6 +26,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -106,6 +107,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Nudelauflauf mit Tomaten-SchinkenCreme Fraiche](https://github.com/stevleibelt/recipes/blob/master/lunch/48.md#deutsch)
 * [Kichererbsen in Kokus-Curry-Soße](https://github.com/stevleibelt/recipes/blob/master/lunch/50.md#deutsch)
 * [Chilli-Tomaten-Linsen](https://github.com/stevleibelt/recipes/blob/master/lunch/51.md#deutsch)
+* [Lustige Augustsuppe](https://github.com/stevleibelt/recipes/blob/master/lunch/55.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
 * [Möhren-Sellerie-Salat](https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
