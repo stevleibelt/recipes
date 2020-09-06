@@ -30,6 +30,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -84,6 +85,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Mokka mit dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/drink/10.md#deutsch)
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
 * [Vitamin-Shot für den Start in den Morgen](https://github.com/stevleibelt/recipes/blob/master/drink/31.md#deutsch)
+* [Goldene Milch](https://github.com/stevleibelt/recipes/blob/master/drink/59.md#deutsch)
 * [Toastbrot / Röstbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/20.md#deutsch)
 * [Mandelmus selber machen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/22.md#deutsch)
 * [Curryreis](https://github.com/stevleibelt/recipes/blob/master/fundamentals/24.md#deutsch)
