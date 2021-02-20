@@ -1,6 +1,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -91,6 +92,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Schwesters Schenkelspaß](https://github.com/stevleibelt/recipes/blob/master/lunch/61.md#deutsch)
 * [Spinat-Ricotta Pfannkuchen oder Auflauf](https://github.com/stevleibelt/recipes/blob/master/lunch/62.md#deutsch)
 * [Möhrensuppe im Thermomix](https://github.com/stevleibelt/recipes/blob/master/lunch/63.md#deutsch)
+* [Rotkohl Kartoffel Lasagne](https://github.com/stevleibelt/recipes/blob/master/lunch/65.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
 * [Möhren-Sellerie-Salat](https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
