@@ -7,6 +7,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -103,6 +104,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Küchenmeisterstulle](https://github.com/stevleibelt/recipes/blob/master/lunch/66.md#deutsch)
 * [Nudeln mit DDR Wurstgulasch](https://github.com/stevleibelt/recipes/blob/master/lunch/69.md#deutsch)
 * [Gnocchi-Gemüse-Pfanne](https://github.com/stevleibelt/recipes/blob/master/lunch/70.md#deutsch)
+* [Hackfleischsuppe mit Lasagneplatten](https://github.com/stevleibelt/recipes/blob/master/lunch/71.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
 * [Möhren-Sellerie-Salat](https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
