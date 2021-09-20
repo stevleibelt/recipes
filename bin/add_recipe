@@ -234,6 +234,8 @@ function update_readme ()
 {
     local PATH_OF_THE_README=README.md
     local PATH_OF_THE_TEMPORARY_README=${PATH_OF_THE_README}.temporary
+    local PATH_OF_THE_TEMPORARY_ENGLISH_INDEX=${PATH_OF_THE_README}.index.en
+    local PATH_OF_THE_TEMPORARY_GERMAN_INDEX=${PATH_OF_THE_README}.index.de
     local PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=1
 
     echo "" > "${PATH_OF_THE_TEMPORARY_README}"
@@ -257,21 +259,25 @@ function update_readme ()
             if [[ "${CURRENT_CONTENT_LINE}" == "## Index" ]];
             then
                 PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=0
-                echo "" >> "${PATH_OF_THE_TEMPORARY_README}"
+                echo "" > "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
                 for ENGLISH_INDEX_CONTENT_LINE in "${GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[@]}";
                 do
-                    echo "* ${ENGLISH_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_README}"
+                    echo "* ${ENGLISH_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
                 done
-                echo "" >> "${PATH_OF_THE_TEMPORARY_README}"
+                echo "" >> "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
+
+		cat "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}" | sort >> "${PATH_OF_THE_TEMPORARY_README}"
             elif [[ "${CURRENT_CONTENT_LINE}" == "## Inhaltsverzeichnis" ]];
             then
                 PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=0
-                echo "" >> "${PATH_OF_THE_TEMPORARY_README}"
+                echo "" > "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
                 for GERMAN_INDEX_CONTENT_LINE in "${GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[@]}";
                 do
-                    echo "* ${GERMAN_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_README}"
+                    echo "* ${GERMAN_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
                 done
-                echo "" >> "${PATH_OF_THE_TEMPORARY_README}"
+                echo "" >> "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
+
+		cat "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}" | sort >> "${PATH_OF_THE_TEMPORARY_README}"
             fi
         fi
     done < "${PATH_OF_THE_README}"
