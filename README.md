@@ -9,6 +9,7 @@
 
 
 
+
 # Recipes
 
 ## Description
@@ -107,6 +108,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Gnocchi-Gemüse-Pfanne](https://github.com/stevleibelt/recipes/blob/master/lunch/70.md#deutsch)
 * [Hackfleischsuppe mit Lasagneplatten](https://github.com/stevleibelt/recipes/blob/master/lunch/71.md#deutsch)
 * [Semmelknödel](https://github.com/stevleibelt/recipes/blob/master/lunch/72.md#deutsch)
+* [Hähnchen-Paprika in Sahne-Sosse](https://github.com/stevleibelt/recipes/blob/master/lunch/73.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
 * [Möhren-Sellerie-Salat](https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
