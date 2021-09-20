@@ -213,19 +213,6 @@ function scan_recipe_files_and_create_language_based_index ()
             done
         fi
     done
-
-    #begin of sorting
-    #@todo
-    #declare -a local SORTED_ARRAY=()
-    #IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[*]}"))
-    #unset IFS 
-    #GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=${SORTED}
-
-    #declare -a local SORTED_ARRAY=()
-    #IFS=$'\n' SORTED_ARRAY=($(sort <<<"${GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[*]}"))
-    #unset IFS 
-    #GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=${SORTED}
-    #end of sorting
 }
 #end of creating dynamic content for the readme
 
@@ -283,6 +270,8 @@ function update_readme ()
     done < "${PATH_OF_THE_README}"
 
     mv ${PATH_OF_THE_TEMPORARY_README} ${PATH_OF_THE_README}
+    rm "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
+    rm "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
 }
 #end of updating the readme
 
