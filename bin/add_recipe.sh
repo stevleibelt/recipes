@@ -279,6 +279,7 @@ function _main ()
     declare -a LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
     declare -a LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
     local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+    local UPDATE_README=0
 
     local PATH_OF_THE_PROJECT_ROOT="${PATH_OF_THE_CURRENT_SCRIPT}/.."
     local PATH_OF_THE_CURRENT_WORKING_DIRECTORY=$(pwd)
@@ -303,6 +304,10 @@ function _main ()
                 echo ""
 
                 exit 0
+                ;;
+            "-u" | "--update-readme" )
+                UPDATE_README=1
+                shift 1
                 ;;
             "-v" | "--verbose" )
                 BE_VERBOSE=1
@@ -345,11 +350,14 @@ function _main ()
     git pull
     #eo: setup
 
-    update_local_variables_by_user_input
-
-    if [[ ${IS_DRY_RUN} -ne 1 ]];
+    if [[ ${UPDATE_README} -ne 1 ]];
     then
-        create_and_edit_recipe_file
+        update_local_variables_by_user_input
+
+        if [[ ${IS_DRY_RUN} -ne 1 ]];
+        then
+            create_and_edit_recipe_file
+        fi
     fi
 
     scan_recipe_files_and_create_language_based_index

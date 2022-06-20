@@ -16,7 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 * Added suffix `.sh` to the files in [bin](bin)
-* Added `-v` to `add_recipe.sh`
+* Added `-v` to `add_recipe.sh` which enables verbosity
+* Added `-u` to `add_recipe.sh` to just update the readme without user interaction
 
 ### Changed
 
