@@ -1,26 +1,15 @@
 #!/bin/bash
 ####
-#work in progress script
+# @author stev leibelt <artodeto@bazzline.net>
+# @since 2016-01-10
 ####
-
-####
-#idea:
-#
-#replaces the create recipe script (or use them)
-####
-
-#begin of local variables
-declare -i GLOBAL_IS_DRY_RUN=0
-declare -a GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
-declare -a GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
-#end of local variables
 
 #begin of functions
 function setup ()
 {
     local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
 
-    source ${PATH_OF_THE_CURRENT_SCRIPT}/core
+    source ${PATH_OF_THE_CURRENT_SCRIPT}/core.sh
 
     core_main
 
@@ -276,15 +265,23 @@ function update_readme ()
 #end of updating the readme
 
 #begin of main
-setup
+function _main ()
+{
+    #begin of local variables
+    declare -i GLOBAL_IS_DRY_RUN=0
+    declare -a GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
+    declare -a GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
+    #end of local variables
+    setup
 
-update_local_variables_by_parsing_the_getopts $@
-update_local_variables_by_user_input
-create_and_edit_recipe_file
-scan_recipe_files_and_create_language_based_index
-update_readme
+    update_local_variables_by_parsing_the_getopts ${@}
+    update_local_variables_by_user_input
+    create_and_edit_recipe_file
+    scan_recipe_files_and_create_language_based_index
+    update_readme
 
-tear_down
+    tear_down
+}
 #end of main
 
 ####
@@ -301,3 +298,5 @@ tear_down
 #   search in each file (per category) if this tag exist and add the title as well as the link to the file into this tag file
 #<ask if you want to edit an existing recipe or create a new recipe>
 ####
+
+_main ${@}
