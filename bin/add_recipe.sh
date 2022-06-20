@@ -73,7 +73,6 @@ function update_local_variables_by_user_input ()
 
     for CATEGORY_KEY in ${!ARRAY_OF_CATEGORIES[@]};
     do
-        echo ${CATEGORY_KEY}
         CATEGORY_LIST_AS_STRING+="${CATEGORY_KEY}) ${ARRAY_OF_CATEGORIES[${CATEGORY_KEY}]}  "
     done
 
@@ -103,12 +102,12 @@ function update_local_variables_by_user_input ()
 #begin of creating the file
 function create_and_edit_recipe_file ()
 {
-    local PATH_OF_THE_INDEX_FILE="${PATH_OF_THE_PROJECT_ROOT}.data/index"
+    local PATH_OF_THE_INDEX_FILE="${PATH_OF_THE_PROJECT_ROOT}/.data/index"
     local INDEX_OF_THE_NEXT_RECIPE=$(cat ${PATH_OF_THE_INDEX_FILE} | tr -cd [:digit:])
 
-    local PATH_OF_THE_ENGLISH_TEMPLATE="${PATH_OF_THE_PROJECT_ROOT}.data/english_template.md"
-    local PATH_OF_THE_GERMAN_TEMPLATE="${PATH_OF_THE_PROJECT_ROOT}.data/german_template.md"
-    local PATH_OF_SELECTED_RECIPE_CATEGORY="${PATH_OF_THE_PROJECT_ROOT}${CATEGORY_NAME}"
+    local PATH_OF_THE_ENGLISH_TEMPLATE="${PATH_OF_THE_PROJECT_ROOT}/.data/english_template.md"
+    local PATH_OF_THE_GERMAN_TEMPLATE="${PATH_OF_THE_PROJECT_ROOT}/.data/german_template.md"
+    local PATH_OF_SELECTED_RECIPE_CATEGORY="${PATH_OF_THE_PROJECT_ROOT}/${CATEGORY_NAME}"
     local PATH_OF_NEXT_RECIPE="${PATH_OF_SELECTED_RECIPE_CATEGORY}/${INDEX_OF_THE_NEXT_RECIPE}.md"
 
     if [[ ! -d "${PATH_OF_SELECTED_RECIPE_CATEGORY}" ]];
@@ -196,10 +195,11 @@ function scan_recipe_files_and_create_language_based_index ()
 #begin of updating the readme
 function update_readme ()
 {
-    local PATH_OF_THE_README=README.md
-    local PATH_OF_THE_TEMPORARY_README=${PATH_OF_THE_README}.temporary
-    local PATH_OF_THE_TEMPORARY_ENGLISH_INDEX=${PATH_OF_THE_README}.index.en
-    local PATH_OF_THE_TEMPORARY_GERMAN_INDEX=${PATH_OF_THE_README}.index.de
+    local PATH_OF_THE_README="${PATH_OF_THE_PROJECT_ROOT}/README.md"
+
+    local PATH_OF_THE_TEMPORARY_README="${PATH_OF_THE_README}.temporary"
+    local PATH_OF_THE_TEMPORARY_ENGLISH_INDEX="${PATH_OF_THE_README}.index.en"
+    local PATH_OF_THE_TEMPORARY_GERMAN_INDEX="${PATH_OF_THE_README}.index.de"
     local PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=1
 
     echo "" > "${PATH_OF_THE_TEMPORARY_README}"
