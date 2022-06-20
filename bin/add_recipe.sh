@@ -5,34 +5,22 @@
 ####
 
 #begin of functions
+####
+# @param <string: message>
+####
+function echo_if_be_verbose ()
+{
+    if [[ ${BE_VERBOSE} -eq 1 ]];
+    then
+        echo "${1}"
+    fi
+}
+
 function tear_down ()
 {
     cd ${PATH_OF_THE_CURRENT_WORKING_DIRECTORY}
 }
 #end of functions
-
-#begin of getops
-function update_local_variables_by_parsing_the_getopts ()
-{
-    while getopts "dh" CURRENT_OPTION;
-    do
-        case ${CURRENT_OPTION} in
-            d )
-                IS_DRY_RUN=1
-                ;;
-            h )
-                echo "Usage: $(basename $0) [OPTION]"
-                echo "The main command to create a new recipe."
-                echo ""
-                echo "Optional arguments."
-                echo "  -d      enable dry run - nothing will happen"
-                echo "  -h      print this help"
-                echo ""
-                ;;
-        esac
-    done
-}
-#end of getops
 
 #begin of user input
 function update_local_variables_by_user_input ()
@@ -60,8 +48,7 @@ function update_local_variables_by_user_input ()
 
     if [[ ${AT_LEAST_ONE_TEMPLATE_WAS_SELECTED} -eq 0 ]];
     then
-        echo "::"
-        echo ":: Failed!"
+        echo ":: Error!"
         echo ":: You have to include at least one translation."
         tear_down
 
@@ -83,16 +70,14 @@ function update_local_variables_by_user_input ()
 
         if [[ -z ${CATEGORY_KEY_SELECTED} ]];
         then
-            echo "::"
-            echo ":: Failed!"
+            echo ":: Error!"
             echo ":: Please input a valid category number."
         elif [[ ! -z ${ARRAY_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]} ]];
         then
             CATEGORY_NAME="${ARRAY_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]}"
             break;
         else
-            echo "::"
-            echo ":: Failed!"
+            echo ":: Error!"
             echo ":: Please input a valid category number."
         fi
     done
@@ -112,13 +97,16 @@ function create_and_edit_recipe_file ()
 
     if [[ ! -d "${PATH_OF_SELECTED_RECIPE_CATEGORY}" ]];
     then
+        echo_if_be_verbose ":: Creating category path >>${PATH_OF_SELECTED_RECIPE_CATEGORY}<<."
         /usr/bin/env mkdir -p ${PATH_OF_SELECTED_RECIPE_CATEGORY}
     fi
 
+    echo_if_be_verbose ":: Creating recipe path >>${PATH_OF_NEXT_RECIPE}<<."
     /usr/bin/env touch ${PATH_OF_NEXT_RECIPE}
 
     if [[ ${ENGLISH_TEMPLATE_SELECTED} == "y" ]];
     then
+        echo_if_be_verbose "   Adding english template content to new recipe."
         /usr/bin/env cat ${PATH_OF_THE_ENGLISH_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}
         #@todo implement a smarter way
         /usr/bin/env echo "" >> ${PATH_OF_NEXT_RECIPE}
@@ -126,10 +114,12 @@ function create_and_edit_recipe_file ()
 
     if [[ ${GERMAN_TEMPLATE_SELECTED} == "y" ]];
     then
+        echo_if_be_verbose "   Adding german template content to new recipe."
         /usr/bin/env cat ${PATH_OF_THE_GERMAN_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}
     fi
 
     ((++INDEX_OF_THE_NEXT_RECIPE))
+    echo_if_be_verbose "   Updating file >>${PATH_OF_THE_INDEX_FILE}<< with content >>next : ${INDEX_OF_THE_NEXT_RECIPE}<<."
     echo "next: ${INDEX_OF_THE_NEXT_RECIPE}" > ${PATH_OF_THE_INDEX_FILE}
 
     /usr/bin/env vim ${PATH_OF_NEXT_RECIPE}
@@ -141,9 +131,9 @@ function scan_recipe_files_and_create_language_based_index ()
 {
     for RECIPE_CATEGORY in "${ARRAY_OF_CATEGORIES[@]}";
     do
-        if [[ -d ${RECIPE_CATEGORY}/ ]];
+        if [[ -d "${RECIPE_CATEGORY}/" ]];
         then
-            for RECIPE_FILENAME in $(ls ${RECIPE_CATEGORY}/);
+            for RECIPE_FILENAME in $(ls "${RECIPE_CATEGORY}/");
             do
                 local RECIPE_GERMAN_TITLE=""
                 local RECIPE_ENGLISH_TITLE=""
@@ -187,6 +177,8 @@ function scan_recipe_files_and_create_language_based_index ()
                     LIST_OF_README_GERMAN_INDEX_CONTENT_LINES+=("[${RECIPE_GERMAN_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#deutsch)")
                 fi
             done
+        else
+            echo_if_be_verbose ":: Skipping category >>${RECIPE_CATEGORY}<< since this path is empty."
         fi
     done
 }
@@ -202,7 +194,24 @@ function update_readme ()
     local PATH_OF_THE_TEMPORARY_GERMAN_INDEX="${PATH_OF_THE_README}.index.de"
     local PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=1
 
-    echo "" > "${PATH_OF_THE_TEMPORARY_README}"
+    if [[ -f "${PATH_OF_THE_TEMPORARY_README}" ]];
+    then
+        rm "${PATH_OF_THE_TEMPORARY_README}"
+    fi
+
+    if [[ -f "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}" ]];
+    then
+        rm "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
+    fi
+
+    if [[ -f "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}" ]];
+    then
+        rm "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
+    fi
+
+    touch "${PATH_OF_THE_TEMPORARY_README}"
+    touch "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
+    touch "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
 
     while read -r CURRENT_CONTENT_LINE;
     do
@@ -230,7 +239,7 @@ function update_readme ()
                 done
                 echo "" >> "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
 
-		cat "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}" | sort >> "${PATH_OF_THE_TEMPORARY_README}"
+		        cat "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}" | sort >> "${PATH_OF_THE_TEMPORARY_README}"
             elif [[ "${CURRENT_CONTENT_LINE}" == "## Inhaltsverzeichnis" ]];
             then
                 PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=0
@@ -241,14 +250,23 @@ function update_readme ()
                 done
                 echo "" >> "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
 
-		cat "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}" | sort >> "${PATH_OF_THE_TEMPORARY_README}"
+		        cat "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}" | sort >> "${PATH_OF_THE_TEMPORARY_README}"
             fi
         fi
     done < "${PATH_OF_THE_README}"
 
-    mv ${PATH_OF_THE_TEMPORARY_README} ${PATH_OF_THE_README}
-    rm "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
-    rm "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
+    if [[ ${IS_DRY_RUN} -eq 0 ]];
+    then
+        mv ${PATH_OF_THE_TEMPORARY_README} ${PATH_OF_THE_README}
+
+        rm "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
+        rm "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
+    else
+        echo_if_be_verbose "   Path of the temporary readme >>${PATH_OF_THE_TEMPORARY_README}<<."
+        echo_if_be_verbose "   Path of the temporary english index >>${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}<<."
+        echo_if_be_verbose "   Path of the temporary german index >>${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}<<."
+    fi
+
 }
 #end of updating the readme
 
@@ -256,7 +274,8 @@ function update_readme ()
 function _main ()
 {
     #bo: local variables
-    declare -i IS_DRY_RUN=0
+    local BE_VERBOSE=0
+    local IS_DRY_RUN=0
     declare -a LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
     declare -a LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
     local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
@@ -265,8 +284,41 @@ function _main ()
     local PATH_OF_THE_CURRENT_WORKING_DIRECTORY=$(pwd)
     #eo: local variables
 
-    #bo: setup
+    #bo: user input
+    while true;
+    do
+        case "${1}" in
+            "-d" | "--dry-run" )
+                IS_DRY_RUN=1
+                shift 1
+                ;;
+            "-h" | "--help" )
+                echo "Usage: $(basename ${0}) [OPTION]"
+                echo "The main command to create a new recipe."
+                echo ""
+                echo "Optional arguments."
+                echo "  -d      enable dry run - nothing will happen"
+                echo "  -h      print this help"
+                echo "  -v      be verbose"
+                echo ""
 
+                exit 0
+                ;;
+            "-v" | "--verbose" )
+                BE_VERBOSE=1
+                shift 1
+                ;;
+            *)
+                break
+                ;;
+        esac
+    done
+
+    echo_if_be_verbose "   BE_VERBOSE: >>${BE_VERBOSE}<<."
+    echo_if_be_verbose "   IS_DRY_RUN: >>${IS_DRY_RUN}<<."
+    #eo: user input
+
+    #bo: setup
     local FILE_PATH="${PATH_OF_THE_PROJECT_ROOT}/.data/categories"
 
     if [[ -f "${FILE_PATH}" ]];
@@ -293,9 +345,13 @@ function _main ()
     git pull
     #eo: setup
 
-    update_local_variables_by_parsing_the_getopts ${@}
     update_local_variables_by_user_input
-    create_and_edit_recipe_file
+
+    if [[ ${IS_DRY_RUN} -ne 1 ]];
+    then
+        create_and_edit_recipe_file
+    fi
+
     scan_recipe_files_and_create_language_based_index
     update_readme
 

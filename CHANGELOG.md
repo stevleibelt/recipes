@@ -15,9 +15,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+* Added suffix `.sh` to the files in [bin](bin)
+* Added `-v` to `add_recipe.sh`
+
 ### Changed
 
-* Added suffix `.sh` to the files in [bin](bin)
-* Removed `core.sh` file and moved logic into `add_recipes.sh`
+* Removed `core.sh` file and moved logic into `add_recipe.sh`
 * Refactored categories configuration
 
