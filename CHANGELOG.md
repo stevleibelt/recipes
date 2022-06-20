@@ -18,4 +18,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 * Added suffix `.sh` to the files in [bin](bin)
+* Removed `core.sh` file and moved logic into `add_recipes.sh`
+* Refactored categories configuration
 

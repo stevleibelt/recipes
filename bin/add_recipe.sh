@@ -5,22 +5,9 @@
 ####
 
 #begin of functions
-function setup ()
-{
-    local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
-
-    source ${PATH_OF_THE_CURRENT_SCRIPT}/core.sh
-
-    core_main
-
-    cd ${GLOBAL_PATH_OF_THE_PROJECT_ROOT}
-
-    git pull
-}
-
 function tear_down ()
 {
-    cd ${GLOBAL_PATH_OF_THE_CURRENT_WORKING_DIRECTORY}
+    cd ${PATH_OF_THE_CURRENT_WORKING_DIRECTORY}
 }
 #end of functions
 
@@ -31,7 +18,7 @@ function update_local_variables_by_parsing_the_getopts ()
     do
         case ${CURRENT_OPTION} in
             d )
-                GLOBAL_IS_DRY_RUN=1
+                IS_DRY_RUN=1
                 ;;
             h )
                 echo "Usage: $(basename $0) [OPTION]"
@@ -52,21 +39,21 @@ function update_local_variables_by_user_input ()
 {
     declare -i local AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=0
 
-    read -p ":: Will this recipe include an english translation? [y/n] (no is default): " GLOBAL_ENGLISH_TEMPLATE_SELECTED
+    read -p ":: Will this recipe include an english translation? [y/n] (no is default): " ENGLISH_TEMPLATE_SELECTED
 
-    read -p ":: Will this recipe include a german translation? [y/n] (yes is default): " GLOBAL_GERMAN_TEMPLATE_SELECTED
+    read -p ":: Will this recipe include a german translation? [y/n] (yes is default): " GERMAN_TEMPLATE_SELECTED
 
-    if [[ ${GLOBAL_GERMAN_TEMPLATE_SELECTED} != "n" ]];
+    if [[ ${GERMAN_TEMPLATE_SELECTED} != "n" ]];
     then
-        GLOBAL_GERMAN_TEMPLATE_SELECTED="y"
+        GERMAN_TEMPLATE_SELECTED="y"
     fi
 
-    if [[ ${GLOBAL_ENGLISH_TEMPLATE_SELECTED} == "y" ]];
+    if [[ ${ENGLISH_TEMPLATE_SELECTED} == "y" ]];
     then
         AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=1
     fi
 
-    if [[ ${GLOBAL_GERMAN_TEMPLATE_SELECTED} == "y" ]];
+    if [[ ${GERMAN_TEMPLATE_SELECTED} == "y" ]];
     then
         AT_LEAST_ONE_TEMPLATE_WAS_SELECTED=1
     fi
@@ -84,9 +71,10 @@ function update_local_variables_by_user_input ()
     echo ":: Available categories are."
     CATEGORY_LIST_AS_STRING=""
 
-    for CATEGORY_KEY in ${!GLOBAL_LIST_OF_CATEGORIES[@]};
+    for CATEGORY_KEY in ${!ARRAY_OF_CATEGORIES[@]};
     do
-        CATEGORY_LIST_AS_STRING+="${CATEGORY_KEY}) ${GLOBAL_LIST_OF_CATEGORIES[${CATEGORY_KEY}]}  "
+        echo ${CATEGORY_KEY}
+        CATEGORY_LIST_AS_STRING+="${CATEGORY_KEY}) ${ARRAY_OF_CATEGORIES[${CATEGORY_KEY}]}  "
     done
 
     while true; do
@@ -99,9 +87,9 @@ function update_local_variables_by_user_input ()
             echo "::"
             echo ":: Failed!"
             echo ":: Please input a valid category number."
-        elif [[ ! -z ${GLOBAL_LIST_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]} ]];
+        elif [[ ! -z ${ARRAY_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]} ]];
         then
-            GLOBAL_CATEGORY_NAME="${GLOBAL_LIST_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]}"
+            CATEGORY_NAME="${ARRAY_OF_CATEGORIES[${CATEGORY_KEY_SELECTED}]}"
             break;
         else
             echo "::"
@@ -115,12 +103,12 @@ function update_local_variables_by_user_input ()
 #begin of creating the file
 function create_and_edit_recipe_file ()
 {
-    local PATH_OF_THE_INDEX_FILE="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/index"
+    local PATH_OF_THE_INDEX_FILE="${PATH_OF_THE_PROJECT_ROOT}.data/index"
     local INDEX_OF_THE_NEXT_RECIPE=$(cat ${PATH_OF_THE_INDEX_FILE} | tr -cd [:digit:])
 
-    local PATH_OF_THE_ENGLISH_TEMPLATE="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/english_template.md"
-    local PATH_OF_THE_GERMAN_TEMPLATE="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}.data/german_template.md"
-    local PATH_OF_SELECTED_RECIPE_CATEGORY="${GLOBAL_PATH_OF_THE_PROJECT_ROOT}${GLOBAL_CATEGORY_NAME}"
+    local PATH_OF_THE_ENGLISH_TEMPLATE="${PATH_OF_THE_PROJECT_ROOT}.data/english_template.md"
+    local PATH_OF_THE_GERMAN_TEMPLATE="${PATH_OF_THE_PROJECT_ROOT}.data/german_template.md"
+    local PATH_OF_SELECTED_RECIPE_CATEGORY="${PATH_OF_THE_PROJECT_ROOT}${CATEGORY_NAME}"
     local PATH_OF_NEXT_RECIPE="${PATH_OF_SELECTED_RECIPE_CATEGORY}/${INDEX_OF_THE_NEXT_RECIPE}.md"
 
     if [[ ! -d "${PATH_OF_SELECTED_RECIPE_CATEGORY}" ]];
@@ -130,14 +118,14 @@ function create_and_edit_recipe_file ()
 
     /usr/bin/env touch ${PATH_OF_NEXT_RECIPE}
 
-    if [[ ${GLOBAL_ENGLISH_TEMPLATE_SELECTED} == "y" ]];
+    if [[ ${ENGLISH_TEMPLATE_SELECTED} == "y" ]];
     then
         /usr/bin/env cat ${PATH_OF_THE_ENGLISH_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}
         #@todo implement a smarter way
         /usr/bin/env echo "" >> ${PATH_OF_NEXT_RECIPE}
     fi
 
-    if [[ ${GLOBAL_GERMAN_TEMPLATE_SELECTED} == "y" ]];
+    if [[ ${GERMAN_TEMPLATE_SELECTED} == "y" ]];
     then
         /usr/bin/env cat ${PATH_OF_THE_GERMAN_TEMPLATE} >> ${PATH_OF_NEXT_RECIPE}
     fi
@@ -152,7 +140,7 @@ function create_and_edit_recipe_file ()
 #begin of creating dynamic content for the readme
 function scan_recipe_files_and_create_language_based_index ()
 {
-    for RECIPE_CATEGORY in "${GLOBAL_LIST_OF_CATEGORIES[@]}";
+    for RECIPE_CATEGORY in "${ARRAY_OF_CATEGORIES[@]}";
     do
         if [[ -d ${RECIPE_CATEGORY}/ ]];
         then
@@ -192,12 +180,12 @@ function scan_recipe_files_and_create_language_based_index ()
 
                 if [[ "${RECIPE_ENGLISH_TITLE}" != "" ]];
                 then
-                    GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES+=("[${RECIPE_ENGLISH_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#english)")
+                    LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES+=("[${RECIPE_ENGLISH_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#english)")
                 fi
 
                 if [[ "${RECIPE_GERMAN_TITLE}" != "" ]];
                 then
-                    GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES+=("[${RECIPE_GERMAN_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#deutsch)")
+                    LIST_OF_README_GERMAN_INDEX_CONTENT_LINES+=("[${RECIPE_GERMAN_TITLE}](https://github.com/stevleibelt/recipes/blob/master/${RECIPE_CATEGORY}/${RECIPE_FILENAME}#deutsch)")
                 fi
             done
         fi
@@ -236,7 +224,7 @@ function update_readme ()
             then
                 PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=0
                 echo "" > "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
-                for ENGLISH_INDEX_CONTENT_LINE in "${GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[@]}";
+                for ENGLISH_INDEX_CONTENT_LINE in "${LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES[@]}";
                 do
                     echo "* ${ENGLISH_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_ENGLISH_INDEX}"
                 done
@@ -247,7 +235,7 @@ function update_readme ()
             then
                 PUT_NEXT_CONTENT_LINE_INTO_TEMPORARY_FILE=0
                 echo "" > "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
-                for GERMAN_INDEX_CONTENT_LINE in "${GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[@]}";
+                for GERMAN_INDEX_CONTENT_LINE in "${LIST_OF_README_GERMAN_INDEX_CONTENT_LINES[@]}";
                 do
                     echo "* ${GERMAN_INDEX_CONTENT_LINE}" >> "${PATH_OF_THE_TEMPORARY_GERMAN_INDEX}"
                 done
@@ -267,12 +255,43 @@ function update_readme ()
 #begin of main
 function _main ()
 {
-    #begin of local variables
-    declare -i GLOBAL_IS_DRY_RUN=0
-    declare -a GLOBAL_LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
-    declare -a GLOBAL_LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
-    #end of local variables
-    setup
+    #bo: local variables
+    declare -i IS_DRY_RUN=0
+    declare -a LIST_OF_README_ENGLISH_INDEX_CONTENT_LINES=()
+    declare -a LIST_OF_README_GERMAN_INDEX_CONTENT_LINES=()
+    local PATH_OF_THE_CURRENT_SCRIPT=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+
+    local PATH_OF_THE_PROJECT_ROOT="${PATH_OF_THE_CURRENT_SCRIPT}/.."
+    local PATH_OF_THE_CURRENT_WORKING_DIRECTORY=$(pwd)
+    #eo: local variables
+
+    #bo: setup
+
+    local FILE_PATH="${PATH_OF_THE_PROJECT_ROOT}/.data/categories"
+
+    if [[ -f "${FILE_PATH}" ]];
+    then
+        source "${FILE_PATH}"
+
+        if [[ ${#ARRAY_OF_CATEGORIES[@]} -lt 1 ]];
+        then
+            echo ":: Error!"
+            echo "   There are less than 1 category defined in >>${FILE_PATH}<< and >>ARRAY_OF_CATEGORIES<<."
+
+            exit 2
+        fi
+
+    else
+        echo ":: Error!"
+        echo "   File not available in path >>${FILE_PATH}<<."
+
+        exit 1
+    fi
+
+    cd ${PATH_OF_THE_PROJECT_ROOT}
+
+    git pull
+    #eo: setup
 
     update_local_variables_by_parsing_the_getopts ${@}
     update_local_variables_by_user_input

@@ -1,6 +1,1 @@
-breakfast
-dinner
-drink
-fundamentals
-lunch
-snack
+declare -a GLOBAL_ARRAY_OF_CATEGORIES=("breakfast" "dinner" "drink" "fundamentals" "lunch" "snack")
