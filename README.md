@@ -32,6 +32,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
 * [Frikadellen ohne Ei](https://github.com/stevleibelt/recipes/blob/master/fundamentals/52.md#deutsch)
 * [Frühlingssalat](https://github.com/stevleibelt/recipes/blob/master/fundamentals/42.md#deutsch)
+* [Gebratene Zucchinis in einer Panade aus Mehl](https://github.com/stevleibelt/recipes/blob/master/fundamentals/80.md#deutsch)
 * [Gnocchi-Gemüse-Pfanne](https://github.com/stevleibelt/recipes/blob/master/lunch/70.md#deutsch)
 * [Goldene Milch](https://github.com/stevleibelt/recipes/blob/master/drink/59.md#deutsch)
 * [Hackfleischsuppe mit Lasagneplatten](https://github.com/stevleibelt/recipes/blob/master/lunch/71.md#deutsch)
@@ -92,6 +93,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Vollkornpizza (Brotgebäck) mit Champignon und Putenstreifen](https://github.com/stevleibelt/recipes/blob/master/dinner/18.md#deutsch)
 * [Zacusca für den Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/47.md#deutsch)
 * [Zacusca im Topf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/46.md#deutsch)
+* [Zucchinischeiben mit einer Ei-Mehl-Panade](https://github.com/stevleibelt/recipes/blob/master/fundamentals/81.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Zucchini-Schiffe mit Tomaten-Mozzarella-Ladung](https://github.com/stevleibelt/recipes/blob/master/lunch/74.md#deutsch)
 # Recipes
