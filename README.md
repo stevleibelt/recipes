@@ -132,3 +132,5 @@ Each recipes can have a german and an english section.
 # Links
 
 * [tdussa/Breirezepte](https://github.com/tdussa/Breirezepte)
+* [Wolfgang Röslers Rezepte](http://roesler-ac.de/wolfram/rezept/index.htm) - 20221005
+
