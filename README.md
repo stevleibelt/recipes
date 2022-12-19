@@ -15,6 +15,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 
 
 * [Aioli im Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/75.md#deutsch)
+* [Amerikanische vollkorn Burgerbunes](https://github.com/stevleibelt/recipes/blob/master/fundamentals/83.md#deutsch)
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
 * [Bratkartoffeln mit Bohnen und Weihnachtskürbis](https://github.com/stevleibelt/recipes/blob/master/dinner/26.md#deutsch)
 * [Buchweizen-Vollkornbrot im Römertopf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/38.md#deutsch)
@@ -53,6 +54,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Küchenmeisterstulle](https://github.com/stevleibelt/recipes/blob/master/lunch/66.md#deutsch)
 * [Kudoweh-Leibelts Brot](https://github.com/stevleibelt/recipes/blob/master/dinner/08.md#deutsch)
 * [Lamm im Römertopf](https://github.com/stevleibelt/recipes/blob/master/dinner/33.md#deutsch)
+* [Leibelt's Familien Kürbissuppe](https://github.com/stevleibelt/recipes/blob/master/lunch/85.md#deutsch)
 * [Lustige Augustsuppe](https://github.com/stevleibelt/recipes/blob/master/lunch/55.md#deutsch)
 * [Mandelmus selber machen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/22.md#deutsch)
 * [Marzipan Kuchen von Omas Oma von vor dem Krieg](https://github.com/stevleibelt/recipes/blob/master/snack/21.md#deutsch)
@@ -90,7 +92,9 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Vitamin-Shot für den Start in den Morgen](https://github.com/stevleibelt/recipes/blob/master/drink/31.md#deutsch)
 * [Viviens Pizza](https://github.com/stevleibelt/recipes/blob/master/lunch/76.md#deutsch)
 * [Vollkornbrötchen mit Quark](https://github.com/stevleibelt/recipes/blob/master/breakfast/19.md#deutsch)
+* [Vollkorn Burger Brötchen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/82.md#deutsch)
 * [Vollkornpizza (Brotgebäck) mit Champignon und Putenstreifen](https://github.com/stevleibelt/recipes/blob/master/dinner/18.md#deutsch)
+* [Waffeln für das Waffeleisen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/84.md#deutsch)
 * [Zacusca für den Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/47.md#deutsch)
 * [Zacusca im Topf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/46.md#deutsch)
 * [Zucchinischeiben mit einer Ei-Mehl-Panade](https://github.com/stevleibelt/recipes/blob/master/fundamentals/81.md#deutsch)
