@@ -38,6 +38,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Gnocchi-Gemüse-Pfanne](https://github.com/stevleibelt/recipes/blob/master/lunch/70.md#deutsch)
 * [Goldene Milch](https://github.com/stevleibelt/recipes/blob/master/drink/59.md#deutsch)
 * [Hackfleischsuppe mit Lasagneplatten](https://github.com/stevleibelt/recipes/blob/master/lunch/71.md#deutsch)
+* [Hähnchen in einer Curry-Kokosnussosse](https://github.com/stevleibelt/recipes/blob/master/lunch/89.md#deutsch)
 * [Hähnchen mit Spargel, Tomaten und Nudeln.](https://github.com/stevleibelt/recipes/blob/master/dinner/01.md#deutsch)
 * [Hähnchen-Paprika in Sahne-Sosse](https://github.com/stevleibelt/recipes/blob/master/lunch/73.md#deutsch)
 * [Herzhaft oder süße Frischkäsecreme](https://github.com/stevleibelt/recipes/blob/master/fundamentals/56.md#deutsch)
