@@ -22,6 +22,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Buchweizen-Vollkornbrot im Römertopf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/38.md#deutsch)
 * [Champignoncreme Soße](https://github.com/stevleibelt/recipes/blob/master/fundamentals/68.md#deutsch)
 * [Chicoree-Gemüse-Nudelauflaug](https://github.com/stevleibelt/recipes/blob/master/lunch/90.md#deutsch)
+* [Chicorée-Linsen Lasagne](https://github.com/stevleibelt/recipes/blob/master/lunch/91.md#deutsch)
 * [Chilli Sin Carne im Thermomix](https://github.com/stevleibelt/recipes/blob/master/lunch/40.md#deutsch)
 * [Chilli-Tomaten-Linsen](https://github.com/stevleibelt/recipes/blob/master/lunch/51.md#deutsch)
 * [Chinesischer Nudelsalat](https://github.com/stevleibelt/recipes/blob/master/fundamentals/41.md#deutsch)
