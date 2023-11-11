@@ -18,6 +18,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Amerikanische vollkorn Burgerbunes](https://github.com/stevleibelt/recipes/blob/master/fundamentals/83.md#deutsch)
 * [Apfel-Zimt-Haferflocken](https://github.com/stevleibelt/recipes/blob/master/snack/93.md#deutsch)
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
+* [Bananenbrot ohne Ei](https://github.com/stevleibelt/recipes/blob/master/snack/94.md#deutsch)
 * [Blumenkohl-Bratlinge](https://github.com/stevleibelt/recipes/blob/master/fundamentals/86.md#deutsch)
 * [Bratkartoffeln mit Bohnen und Weihnachtskürbis](https://github.com/stevleibelt/recipes/blob/master/dinner/26.md#deutsch)
 * [Buchweizen-Vollkornbrot im Römertopf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/38.md#deutsch)
