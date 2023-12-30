@@ -20,6 +20,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
 * [Bananenbrot ohne Ei](https://github.com/stevleibelt/recipes/blob/master/snack/94.md#deutsch)
 * [Blumenkohl-Bratlinge](https://github.com/stevleibelt/recipes/blob/master/fundamentals/86.md#deutsch)
+* [Borschtsch (Kulinarik) nach Art von Theodor](https://github.com/stevleibelt/recipes/blob/master/lunch/97.md#deutsch)
 * [Bratkartoffeln mit Bohnen und Weihnachtskürbis](https://github.com/stevleibelt/recipes/blob/master/dinner/26.md#deutsch)
 * [Buchweizen-Vollkornbrot im Römertopf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/38.md#deutsch)
 * [Champignoncreme Soße](https://github.com/stevleibelt/recipes/blob/master/fundamentals/68.md#deutsch)
