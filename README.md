@@ -72,6 +72,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Möhrensuppe im Thermomix](https://github.com/stevleibelt/recipes/blob/master/lunch/63.md#deutsch)
 * [Möhren-Walnuss-Brot im Römertopf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/95.md#deutsch)
 * [Mokka mit dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/drink/10.md#deutsch)
+* [Nachos im Mexikoauflauf mit Kräuterdip](https://github.com/stevleibelt/recipes/blob/master/fundamentals/98.md#deutsch)
 * [Nudelauflauf ala Stev](https://github.com/stevleibelt/recipes/blob/master/dinner/09.md#deutsch)
 * [Nudelauflauf mit Tomaten-SchinkenCreme Fraiche](https://github.com/stevleibelt/recipes/blob/master/lunch/48.md#deutsch)
 * [Nudeln in Knoblauchsauce ala Leibelt](https://github.com/stevleibelt/recipes/blob/master/lunch/92.md#deutsch)
