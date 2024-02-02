@@ -102,6 +102,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Tomaten-Frischkäse](https://github.com/stevleibelt/recipes/blob/master/fundamentals/57.md#deutsch)
 * [Tzaziki](https://github.com/stevleibelt/recipes/blob/master/fundamentals/53.md#deutsch)
 * [Vegetarische Möhrenbolognese](https://github.com/stevleibelt/recipes/blob/master/lunch/28.md#deutsch)
+* [Vegetarisches Moussaka](https://github.com/stevleibelt/recipes/blob/master/lunch/99.md#deutsch)
 * [Vitamin-Shot für den Start in den Morgen](https://github.com/stevleibelt/recipes/blob/master/drink/31.md#deutsch)
 * [Viviens Pizza](https://github.com/stevleibelt/recipes/blob/master/lunch/76.md#deutsch)
 * [Vollkornbrötchen mit Quark](https://github.com/stevleibelt/recipes/blob/master/breakfast/19.md#deutsch)
