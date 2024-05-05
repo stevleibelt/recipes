@@ -84,6 +84,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Nudeln mit Speck in Tomaten-Eiweiß-Sosse](https://github.com/stevleibelt/recipes/blob/master/dinner/04.md#deutsch)
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
 * [Pizzateige](https://github.com/stevleibelt/recipes/blob/master/fundamentals/29.md#deutsch)
+* [Rhabarberkuchen](https://github.com/stevleibelt/recipes/blob/master/snack/103.md#deutsch)
 * [Ricotta-Spinat-Parmesan im Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/67.md#deutsch)
 * [Rosmarin-Kartoffel-Tomaten-Auflauf](https://github.com/stevleibelt/recipes/blob/master/lunch/88.md#deutsch)
 * [Rote Grütze mit Vanillesoße](https://github.com/stevleibelt/recipes/blob/master/snack/36.md#deutsch)
