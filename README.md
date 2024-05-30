@@ -35,6 +35,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Einfache Gurkensuppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/78.md#deutsch)
 * [Einfache Käsenudeln](https://github.com/stevleibelt/recipes/blob/master/lunch/44.md#deutsch)
 * [Einfacher Frischkornbrei im Thermomix](https://github.com/stevleibelt/recipes/blob/master/snack/16.md#deutsch)
+* [Eiweißbrot mit lokalen Zutaten](https://github.com/stevleibelt/recipes/blob/master/fundamentals/107.md#deutsch)
 * [Erdnussbutter](https://github.com/stevleibelt/recipes/blob/master/fundamentals/32.md#deutsch)
 * [Erdnussnudeln](https://github.com/stevleibelt/recipes/blob/master/lunch/100.md#deutsch)
 * [Freiberger Eierschecke nach Art des Hauses Kudoweh-Leibelt.](https://github.com/stevleibelt/recipes/blob/master/snack/06.md#deutsch)
