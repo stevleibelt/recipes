@@ -83,6 +83,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Nudeln mit Möhrensosse](https://github.com/stevleibelt/recipes/blob/master/dinner/03.md#deutsch)
 * [Nudeln mit Speck in Tomaten-Eiweiß-Sosse](https://github.com/stevleibelt/recipes/blob/master/dinner/04.md#deutsch)
 * [Nuss-/Getreide- oder Mandelmilch aus ganzen Mandeln](https://github.com/stevleibelt/recipes/blob/master/drink/23.md#deutsch)
+* [Pav Bhaji - Kartoffen mit Gemüse in einer Tomatensosse](https://github.com/stevleibelt/recipes/blob/master/dinner/105.md#deutsch)
 * [Pizzateige](https://github.com/stevleibelt/recipes/blob/master/fundamentals/29.md#deutsch)
 * [Rhabarberkuchen](https://github.com/stevleibelt/recipes/blob/master/snack/103.md#deutsch)
 * [Rhabarber Marmelade](https://github.com/stevleibelt/recipes/blob/master/snack/104.md#deutsch)
