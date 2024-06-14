@@ -54,6 +54,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Hummus (vegetarische Pesto)](https://github.com/stevleibelt/recipes/blob/master/fundamentals/37.md#deutsch)
 * [Kartoffelbrei im Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/45.md#deutsch)
 * [Kartoffeln in Käse-Zitrone-Kokosnuss-Sosse](https://github.com/stevleibelt/recipes/blob/master/dinner/05.md#deutsch)
+* [Kartoffel-Zucchini-Auflauf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/108.md#deutsch)
 * [Käsepizza mit Oliven und Bohnen](https://github.com/stevleibelt/recipes/blob/master/dinner/02.md#deutsch)
 * [Kassler mit Sojasosse und Klößen.](https://github.com/stevleibelt/recipes/blob/master/dinner/00.md#deutsch)
 * [Kichererbsen in Kokus-Curry-Soße](https://github.com/stevleibelt/recipes/blob/master/lunch/50.md#deutsch)
