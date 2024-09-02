@@ -60,6 +60,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Kichererbsen in Kokus-Curry-Soße](https://github.com/stevleibelt/recipes/blob/master/lunch/50.md#deutsch)
 * [Klöße nach Art des Hauses Leibelt](https://github.com/stevleibelt/recipes/blob/master/dinner/11.md#deutsch)
 * [Knoblauch-Dattel-Creme](https://github.com/stevleibelt/recipes/blob/master/fundamentals/58.md#deutsch)
+* [Knoblauch-Kichererbesen-Knoblauch mit Ofengemüse (K-K-K-O)](https://github.com/stevleibelt/recipes/blob/master/lunch/109.md#deutsch)
 * [Knoblauch-Mozzarella-Dinkel-Pizza](https://github.com/stevleibelt/recipes/blob/master/dinner/25.md#deutsch)
 * [Knoblauch-Zwiebel-Honig Antibiotikum](https://github.com/stevleibelt/recipes/blob/master/fundamentals/96.md#deutsch)
 * [Krustenbraten im Römertopf](https://github.com/stevleibelt/recipes/blob/master/dinner/35.md#deutsch)
