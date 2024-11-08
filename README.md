@@ -16,6 +16,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 
 * [Aioli im Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/75.md#deutsch)
 * [Amerikanische vollkorn Burgerbunes](https://github.com/stevleibelt/recipes/blob/master/fundamentals/83.md#deutsch)
+* [Antipasti](https://github.com/stevleibelt/recipes/blob/master/fundamentals/114.md#deutsch)
 * [Apfel-Zimt-Haferflocken](https://github.com/stevleibelt/recipes/blob/master/snack/93.md#deutsch)
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
 * [Bananenbrot ohne Ei](https://github.com/stevleibelt/recipes/blob/master/snack/94.md#deutsch)
