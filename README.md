@@ -20,6 +20,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Apfel-Zimt-Haferflocken](https://github.com/stevleibelt/recipes/blob/master/snack/93.md#deutsch)
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
 * [Bananenbrot ohne Ei](https://github.com/stevleibelt/recipes/blob/master/snack/94.md#deutsch)
+* [Bechamelsosse](https://github.com/stevleibelt/recipes/blob/master/fundamentals/115.md#deutsch)
 * [Blomenkohl-Brokkolie-Reis mit Gemüse](https://github.com/stevleibelt/recipes/blob/master/lunch/110.md#deutsch)
 * [Blumenkohl-Bratlinge](https://github.com/stevleibelt/recipes/blob/master/fundamentals/86.md#deutsch)
 * [Borschtsch (Kulinarik) nach Art von Theodor](https://github.com/stevleibelt/recipes/blob/master/lunch/97.md#deutsch)
