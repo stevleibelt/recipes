@@ -113,6 +113,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Süßes Dinkelbrot nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/snack/15.md#deutsch)
 * [Theodors Würstchenmantel](https://github.com/stevleibelt/recipes/blob/master/lunch/77.md#deutsch)
 * [Toastbrot / Röstbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/20.md#deutsch)
+* [Tofu-Lasagne](https://github.com/stevleibelt/recipes/blob/master/lunch/116.md#deutsch)
 * [Tollkühner winkhausscher Wunderteig](https://github.com/stevleibelt/recipes/blob/master/snack/12.md#deutsch)
 * [Tomaten-Curry-Reis](https://github.com/stevleibelt/recipes/blob/master/fundamentals/106.md#deutsch)
 * [Tomaten-Frischkäse](https://github.com/stevleibelt/recipes/blob/master/fundamentals/57.md#deutsch)
