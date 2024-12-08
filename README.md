@@ -102,7 +102,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Rotkohl Kartoffel Auflauf](https://github.com/stevleibelt/recipes/blob/master/lunch/65.md#deutsch)
 * [Sächsischer Kartoffelsalat nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/fundamentals/49.md#deutsch)
 * [Schlesische Gurkensuppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/79.md#deutsch)
-* [Schnitzel Panoieren](https://github.com/stevleibelt/recipes/blob/master/fundamentals/117.md#deutsch)
+* [Schnitzel paniert](https://github.com/stevleibelt/recipes/blob/master/fundamentals/117.md#deutsch)
 * [Schüttelgurken nach Omas Art](https://github.com/stevleibelt/recipes/blob/master/fundamentals/54.md#deutsch)
 * [Schwesters Schenkelspaß](https://github.com/stevleibelt/recipes/blob/master/lunch/61.md#deutsch)
 * [Schwesters schwarze Suppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/60.md#deutsch)
