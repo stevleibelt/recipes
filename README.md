@@ -75,6 +75,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Kudoweh-Leibelts Brot](https://github.com/stevleibelt/recipes/blob/master/dinner/08.md#deutsch)
 * [Lamm im Römertopf](https://github.com/stevleibelt/recipes/blob/master/dinner/33.md#deutsch)
 * [Leibelt's Familien Kürbissuppe](https://github.com/stevleibelt/recipes/blob/master/lunch/85.md#deutsch)
+* [Linsensuppe nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/lunch/122.md#deutsch)
 * [Lustige Augustsuppe](https://github.com/stevleibelt/recipes/blob/master/lunch/55.md#deutsch)
 * [Mandelmus selber machen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/22.md#deutsch)
 * [Marzipan Kuchen von Omas Oma von vor dem Krieg](https://github.com/stevleibelt/recipes/blob/master/snack/21.md#deutsch)
