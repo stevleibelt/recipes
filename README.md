@@ -19,6 +19,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Antipasti](https://github.com/stevleibelt/recipes/blob/master/fundamentals/114.md#deutsch)
 * [Apfel-Zimt-Haferflocken](https://github.com/stevleibelt/recipes/blob/master/snack/93.md#deutsch)
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
+* [Bananenbrot mit Haferflocken](https://github.com/stevleibelt/recipes/blob/master/snack/121.md#deutsch)
 * [Bananenbrot ohne Ei](https://github.com/stevleibelt/recipes/blob/master/snack/94.md#deutsch)
 * [Bechamelsosse](https://github.com/stevleibelt/recipes/blob/master/fundamentals/115.md#deutsch)
 * [Blomenkohl-Brokkolie-Reis mit Gemüse](https://github.com/stevleibelt/recipes/blob/master/lunch/110.md#deutsch)
