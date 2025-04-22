@@ -112,6 +112,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Schwesters schwarze Suppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/60.md#deutsch)
 * [Semmelbrösel](https://github.com/stevleibelt/recipes/blob/master/fundamentals/87.md#deutsch)
 * [Semmelknödel](https://github.com/stevleibelt/recipes/blob/master/lunch/72.md#deutsch)
+* [Soljanka nach Art des Hauses](https://github.com/stevleibelt/recipes/blob/master/lunch/123.md#deutsch)
 * [Sour Cream](https://github.com/stevleibelt/recipes/blob/master/fundamentals/64.md#deutsch)
 * [Spinat-Ricotta Pfannkuchen oder Auflauf](https://github.com/stevleibelt/recipes/blob/master/lunch/62.md#deutsch)
 * [Stockbrot](https://github.com/stevleibelt/recipes/blob/master/snack/27.md#deutsch)
