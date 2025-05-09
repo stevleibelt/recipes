@@ -80,6 +80,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Mandelmus selber machen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/22.md#deutsch)
 * [Marzipan Kuchen von Omas Oma von vor dem Krieg](https://github.com/stevleibelt/recipes/blob/master/snack/21.md#deutsch)
 * [Mayonnaise](https://github.com/stevleibelt/recipes/blob/master/fundamentals/43.md#deutsch)
+* [Mediteraner Sonnentopf](https://github.com/stevleibelt/recipes/blob/master/lunch/124.md#deutsch)
 * [Mexikanische Kartoffelpfanne](https://github.com/stevleibelt/recipes/blob/master/lunch/102.md#deutsch)
 * [Möhren-Leinsam-Sosse mit Kartoffelecken](https://github.com/stevleibelt/recipes/blob/master/dinner/30.md#deutsch)
 * [Möhren-Sellerie-Salat](https://github.com/stevleibelt/recipes/blob/master/snack/13.md#deutsch)
