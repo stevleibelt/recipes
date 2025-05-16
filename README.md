@@ -21,6 +21,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Baiser](https://github.com/stevleibelt/recipes/blob/master/snack/14.md#deutsch)
 * [Bananenbrot mit Haferflocken](https://github.com/stevleibelt/recipes/blob/master/snack/121.md#deutsch)
 * [Bananenbrot ohne Ei](https://github.com/stevleibelt/recipes/blob/master/snack/94.md#deutsch)
+* [Basisches, veganes Chili](https://github.com/stevleibelt/recipes/blob/master/lunch/125.md#deutsch)
 * [Bechamelsosse](https://github.com/stevleibelt/recipes/blob/master/fundamentals/115.md#deutsch)
 * [Blomenkohl-Brokkolie-Reis mit Gemüse](https://github.com/stevleibelt/recipes/blob/master/lunch/110.md#deutsch)
 * [Blumenkohl-Bratlinge](https://github.com/stevleibelt/recipes/blob/master/fundamentals/86.md#deutsch)
