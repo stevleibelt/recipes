@@ -141,6 +141,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Zucchinischeiben mit einer Ei-Mehl-Panade](https://github.com/stevleibelt/recipes/blob/master/fundamentals/81.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Zucchini-Schiffe mit Tomaten-Mozzarella-Ladung](https://github.com/stevleibelt/recipes/blob/master/lunch/74.md#deutsch)
+* [Zucchini-Tomaten-Tarte](https://github.com/stevleibelt/recipes/blob/master/lunch/127.md#deutsch)
 # Recipes
 
 ## Description
