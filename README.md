@@ -130,6 +130,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Tortilla Leibelt](https://github.com/stevleibelt/recipes/blob/master/lunch/128.md#deutsch)
 * [Tzaziki](https://github.com/stevleibelt/recipes/blob/master/fundamentals/53.md#deutsch)
 * [Überbackene Hackepeterbrötchen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/118.md#deutsch)
+* [Umami-Bowl nach Art des Hauses Leibelt](https://github.com/stevleibelt/recipes/blob/master/lunch/130.md#deutsch)
 * [Vegetarische Möhrenbolognese](https://github.com/stevleibelt/recipes/blob/master/lunch/28.md#deutsch)
 * [Vegetarisches Moussaka](https://github.com/stevleibelt/recipes/blob/master/lunch/99.md#deutsch)
 * [Vitamin-Shot für den Start in den Morgen](https://github.com/stevleibelt/recipes/blob/master/drink/31.md#deutsch)
