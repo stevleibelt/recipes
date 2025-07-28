@@ -119,6 +119,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Sour Cream](https://github.com/stevleibelt/recipes/blob/master/fundamentals/64.md#deutsch)
 * [Spinat-Ricotta Pfannkuchen oder Auflauf](https://github.com/stevleibelt/recipes/blob/master/lunch/62.md#deutsch)
 * [Stockbrot](https://github.com/stevleibelt/recipes/blob/master/snack/27.md#deutsch)
+* [Sushi Reis im Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/129.md#deutsch)
 * [Süßes Dinkelbrot nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/snack/15.md#deutsch)
 * [Theodors Würstchenmantel](https://github.com/stevleibelt/recipes/blob/master/lunch/77.md#deutsch)
 * [Toastbrot / Röstbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/20.md#deutsch)
