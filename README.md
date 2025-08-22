@@ -141,6 +141,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Waffeln für das Waffeleisen](https://github.com/stevleibelt/recipes/blob/master/fundamentals/84.md#deutsch)
 * [Zacusca für den Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/47.md#deutsch)
 * [Zacusca im Topf](https://github.com/stevleibelt/recipes/blob/master/fundamentals/46.md#deutsch)
+* [Zucchini-Käse auf die Hand](https://github.com/stevleibelt/recipes/blob/master/dinner/131.md#deutsch)
 * [Zucchinischeiben mit einer Ei-Mehl-Panade](https://github.com/stevleibelt/recipes/blob/master/fundamentals/81.md#deutsch)
 * [Zucchinischiffchen mit Basilikumhack und Karotte-Kartoffelbrei](https://github.com/stevleibelt/recipes/blob/master/lunch/17.md#deutsch)
 * [Zucchini-Schiffe mit Tomaten-Mozzarella-Ladung](https://github.com/stevleibelt/recipes/blob/master/lunch/74.md#deutsch)
