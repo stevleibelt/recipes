@@ -50,6 +50,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Gebratene Zucchinis in einer Panade aus Mehl](https://github.com/stevleibelt/recipes/blob/master/fundamentals/80.md#deutsch)
 * [Gnocchi-Gemüse-Pfanne](https://github.com/stevleibelt/recipes/blob/master/lunch/70.md#deutsch)
 * [Goldene Milch](https://github.com/stevleibelt/recipes/blob/master/drink/59.md#deutsch)
+* [Griechische Zitronensuppe mit Hühnchenfleisch](https://github.com/stevleibelt/recipes/blob/master/lunch/134.md#deutsch)
 * [Grundlage einer Ramen Suppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/101.md#deutsch)
 * [Grundteig für einen Obstkuchen](https://github.com/stevleibelt/recipes/blob/master/snack/132.md#deutsch)
 * [Hackfleischsuppe mit Lasagneplatten](https://github.com/stevleibelt/recipes/blob/master/lunch/71.md#deutsch)
