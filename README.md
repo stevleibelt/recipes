@@ -38,6 +38,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Chipas](https://github.com/stevleibelt/recipes/blob/master/fundamentals/39.md#deutsch)
 * [Curryreis](https://github.com/stevleibelt/recipes/blob/master/fundamentals/24.md#deutsch)
 * [Eierkuchen](https://github.com/stevleibelt/recipes/blob/master/dinner/07.md#deutsch)
+* [Einfache Gulasch- oder Tofusuppe](https://github.com/stevleibelt/recipes/blob/master/lunch/135.md#deutsch)
 * [Einfache Gurkensuppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/78.md#deutsch)
 * [Einfache Käsenudeln](https://github.com/stevleibelt/recipes/blob/master/lunch/44.md#deutsch)
 * [Einfacher Frischkornbrei im Thermomix](https://github.com/stevleibelt/recipes/blob/master/snack/16.md#deutsch)
