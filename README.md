@@ -68,7 +68,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Kartoffel-Zucchini-Tortilla-Auflauf nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/lunch/113.md#deutsch)
 * [Kartoffen mit Halloumikäse, Granatapfel und Minze](https://github.com/stevleibelt/recipes/blob/master/lunch/126.md#deutsch)
 * [Käsepizza mit Oliven und Bohnen](https://github.com/stevleibelt/recipes/blob/master/dinner/02.md#deutsch)
-* [Käserolle im Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/133.md#deutsch)
+* [Käserolle](https://github.com/stevleibelt/recipes/blob/master/fundamentals/133.md#deutsch)
 * [Kassler mit Sojasosse und Klößen.](https://github.com/stevleibelt/recipes/blob/master/dinner/00.md#deutsch)
 * [Kichererbsen in Kokus-Curry-Soße](https://github.com/stevleibelt/recipes/blob/master/lunch/50.md#deutsch)
 * [Klöße nach Art des Hauses Leibelt](https://github.com/stevleibelt/recipes/blob/master/dinner/11.md#deutsch)
