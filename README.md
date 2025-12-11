@@ -185,6 +185,7 @@ Each recipes can have a german and an english section.
 
 # Links
 
-* [tdussa/Breirezepte](https://github.com/tdussa/Breirezepte)
-* [Wolfgang Röslers Rezepte](http://roesler-ac.de/wolfram/rezept/index.htm) - 20221005
+* [tdussa/Breirezepte: github.com](https://github.com/tdussa/Breirezepte)
+* [Blackjackx/Receipts: github.com](https://github.com/Blackjacx/Receipts) - 20251211
+* [Wolfgang Röslers Rezepte: roesler-ac.de](http://roesler-ac.de/wolfram/rezept/index.htm) - 20221005
 
