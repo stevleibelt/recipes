@@ -114,6 +114,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Rotkohl Kartoffel Auflauf](https://github.com/stevleibelt/recipes/blob/master/lunch/65.md#deutsch)
 * [Rotkraut nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/fundamentals/120.md#deutsch)
 * [Sächsischer Kartoffelsalat nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/fundamentals/49.md#deutsch)
+* [Sauerkrautsuppe](https://github.com/stevleibelt/recipes/blob/master/lunch/138.md#deutsch)
 * [Schlesische Gurkensuppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/79.md#deutsch)
 * [Schnitzel paniert](https://github.com/stevleibelt/recipes/blob/master/fundamentals/117.md#deutsch)
 * [Schüttelgurken nach Omas Art](https://github.com/stevleibelt/recipes/blob/master/fundamentals/54.md#deutsch)
