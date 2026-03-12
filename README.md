@@ -61,6 +61,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Herzhaft oder süße Frischkäsecreme](https://github.com/stevleibelt/recipes/blob/master/fundamentals/56.md#deutsch)
 * [Honig-Senf-Sosse](https://github.com/stevleibelt/recipes/blob/master/fundamentals/34.md#deutsch)
 * [Hummus (vegetarische Pesto)](https://github.com/stevleibelt/recipes/blob/master/fundamentals/37.md#deutsch)
+* [Kartoffelauflauf in Brokkoli-Frischkäse-Sauce](https://github.com/stevleibelt/recipes/blob/master/lunch/141.md#deutsch)
 * [Kartoffelbrei im Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/45.md#deutsch)
 * [Kartoffelcurry in Tomatensauce für den Thermomix](https://github.com/stevleibelt/recipes/blob/master/lunch/111.md#deutsch)
 * [Kartoffel-Lauch-Suppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/136.md#deutsch)
