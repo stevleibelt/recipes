@@ -108,6 +108,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Papas Reisnudeln in Tomatensosse](https://github.com/stevleibelt/recipes/blob/master/lunch/140.md#deutsch)
 * [Pav Bhaji - Kartoffen mit Gemüse in einer Tomatensosse (nach Art des Hauses)](https://github.com/stevleibelt/recipes/blob/master/dinner/105.md#deutsch)
 * [Pizzateige](https://github.com/stevleibelt/recipes/blob/master/fundamentals/29.md#deutsch)
+* [Reis mit Fenchel](https://github.com/stevleibelt/recipes/blob/master/lunch/143.md#deutsch)
 * [Rhabarberkuchen](https://github.com/stevleibelt/recipes/blob/master/snack/103.md#deutsch)
 * [Rhabarber Marmelade](https://github.com/stevleibelt/recipes/blob/master/snack/104.md#deutsch)
 * [Rheinischer Fleischsalat nach Art des Hauses Kudoweh-Leibelt](https://github.com/stevleibelt/recipes/blob/master/fundamentals/112.md#deutsch)
