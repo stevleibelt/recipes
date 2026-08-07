@@ -125,6 +125,7 @@ Jedes Rezept kann auf Deutsch und auf Englisch sein.
 * [Schlesische Gurkensuppe](https://github.com/stevleibelt/recipes/blob/master/fundamentals/79.md#deutsch)
 * [Schneller Blumenkohl-Kartoffel-Auflauf für Faule](https://github.com/stevleibelt/recipes/blob/master/lunch/144.md#deutsch)
 * [Schneller Tzatziki aus dem Thermomix](https://github.com/stevleibelt/recipes/blob/master/fundamentals/142.md#deutsch)
+* [Schnelles Quark-Vollkornbrot](https://github.com/stevleibelt/recipes/blob/master/fundamentals/148.md#deutsch)
 * [Schnitzel paniert](https://github.com/stevleibelt/recipes/blob/master/fundamentals/117.md#deutsch)
 * [Schüttelgurken nach Omas Art](https://github.com/stevleibelt/recipes/blob/master/fundamentals/54.md#deutsch)
 * [Schwesters Schenkelspaß](https://github.com/stevleibelt/recipes/blob/master/lunch/61.md#deutsch)
